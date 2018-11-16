@@ -1,0 +1,12 @@
+name: "OHDSI Methods Library"
+output_dir: "docs"
+output:
+  html_document:
+    theme: cosmo
+navbar:
+  title: "OHDSI Methods Library"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
