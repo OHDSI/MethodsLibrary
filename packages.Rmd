@@ -1,0 +1,73 @@
+---
+title: "Packages"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+# Population-level estimation
+
+The methods library consists of a set of R packages that can be used to execute observational studies against data in the Common Data Model (CDM) format. The following packages are available:
+
+## `r icon::fa("cube")`  CohortMethod
+New-user cohort studies using large-scale regression for propensity and outcome models
+
+
+## `r icon::fa("cube")`  SelfControlledCaseSeries
+Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.
+
+
+## `r icon::fa("cube")`  SelfControlledCohort
+A self-controlled cohort design, where time preceding exposure is used as control.
+
+
+## `r icon::fa("cube")`  CaseControl
+Case-control studies, matching controls on age, gender, provider, and visit date. Allows nesting of the study in another cohort.
+
+
+## `r icon::fa("cube")`  CaseCrossover
+including the option to adjust for time-trends in exposures (so-called case-time-control).
+
+
+# Patient-Level prediction
+
+
+## `r icon::fa("cube")` PatientLevelPrediction
+Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.
+
+# Method characterization
+
+## `r icon::fa("cube")` EmpiricalCalibration
+Use negative and positive control exposure-outcome pairs to profile and calibrate a particular analysis design.
+
+
+## `r icon::fa("cube")`  MethodEvaluation
+Use real data and established reference sets to evaluate the performance of methods.
+
+
+## `r icon::fa("cube")`  EvidenceSynthesis
+Combining study diagnostics and results across multiple sites.
+
+
+# Supporting packages
+
+## `r icon::fa("cube")`  Cyclops
+Highly efficient implementation of regularized logistic, Poisson and Cox regression.
+
+
+## `r icon::fa("cube")`  FeatureExtraction
+Automatically extract large sets of features for user-specified cohorts using data in the CDM.
+
+
+## `r icon::fa("cube")` DatabaseConnector
+
+
+## `r icon::fa("cube")` SqlRender
+Generate SQL on the fly for the various SQL dialects.
+
+[Learn more ...](https://ohdsi.github.io/SqlRender)
+
+
+## `r icon::fa("cube")` ParallelLogger
+An R package for easy parallel computing, logging, and function call automation.

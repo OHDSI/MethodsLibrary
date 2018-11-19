@@ -1,0 +1,11 @@
+---
+title: "Publications"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+# Clinical application
+
+# Methods research

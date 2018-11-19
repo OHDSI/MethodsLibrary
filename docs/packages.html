@@ -11,7 +11,7 @@
 
 
 
-<title>README.utf8.md</title>
+<title>Packages</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,9 +19,13 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -261,6 +265,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -343,18 +442,85 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Packages</h1>
 
 </div>
 
 
-<div id="methodslibrary" class="section level1">
-<h1>MethodsLibrary</h1>
-<p>[Under development] A central repository for things related to the OHDSI Methods Library</p>
-<p>This builds the <a href="https://ohdsi.github.io/MethodsLibrary">Methods Library website</a>.</p>
+<div id="population-level-estimation" class="section level1">
+<h1>Population-level estimation</h1>
+<p>The methods library consists of a set of R packages that can be used to execute observational studies against data in the Common Data Model (CDM) format. The following packages are available:</p>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> CohortMethod</h2>
+<p>New-user cohort studies using large-scale regression for propensity and outcome models</p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> SelfControlledCaseSeries</h2>
+<p>Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.</p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> SelfControlledCohort</h2>
+<p>A self-controlled cohort design, where time preceding exposure is used as control.</p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> CaseControl</h2>
+<p>Case-control studies, matching controls on age, gender, provider, and visit date. Allows nesting of the study in another cohort.</p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> CaseCrossover</h2>
+<p>including the option to adjust for time-trends in exposures (so-called case-time-control).</p>
+</div>
+</div>
+<div id="patient-level-prediction" class="section level1">
+<h1>Patient-Level prediction</h1>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> PatientLevelPrediction</h2>
+<p>Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.</p>
+</div>
+</div>
+<div id="method-characterization" class="section level1">
+<h1>Method characterization</h1>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> EmpiricalCalibration</h2>
+<p>Use negative and positive control exposure-outcome pairs to profile and calibrate a particular analysis design.</p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> MethodEvaluation</h2>
+<p>Use real data and established reference sets to evaluate the performance of methods.</p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> EvidenceSynthesis</h2>
+<p>Combining study diagnostics and results across multiple sites.</p>
+</div>
+</div>
+<div id="supporting-packages" class="section level1">
+<h1>Supporting packages</h1>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> Cyclops</h2>
+<p>Highly efficient implementation of regularized logistic, Poisson and Cox regression.</p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> FeatureExtraction</h2>
+<p>Automatically extract large sets of features for user-specified cohorts using data in the CDM.</p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> DatabaseConnector</h2>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> SqlRender</h2>
+<p>Generate SQL on the fly for the various SQL dialects.</p>
+<p><a href="https://ohdsi.github.io/SqlRender">Learn more …</a></p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> ParallelLogger</h2>
+<p>An R package for easy parallel computing, logging, and function call automation.</p>
+</div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 

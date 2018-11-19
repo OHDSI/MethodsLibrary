@@ -6,7 +6,27 @@ output:
 navbar:
   title: "OHDSI Methods Library"
   left:
-    - text: "Home"
+    - text: "Overview"
+      icon: fa-globe
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Packages"
+      icon: fa-cube
+      href: packages.html
+    - text: "Installation"
+      icon: fa-download
+      href: installation.html
+    - text: "Learning"
+      icon: fa-graduation-cap
+      href: learning.html
+    - text: "Support"
+      icon: fa-life-ring
+      href: support.html      
+    - text: "Validation"
+      icon: fa-clipboard-check
+      href: validation.html  
+    - text: "Publications"
+      icon: fa-pen-alt
+      href: publications.html
+    - text: "Development"
+      icon: fa-wrench
+      href: development.html  

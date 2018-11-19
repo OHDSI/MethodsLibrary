@@ -1,0 +1,7 @@
+---
+title: "Learning"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
