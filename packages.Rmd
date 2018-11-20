@@ -13,6 +13,7 @@ The methods library consists of a set of R packages that can be used to execute 
 ## `r icon::fa("cube")`  CohortMethod
 New-user cohort studies using large-scale regression for propensity and outcome models
 
+[Learn more ...](https://ohdsi.github.io/CohortMethod)
 
 ## `r icon::fa("cube")`  SelfControlledCaseSeries
 Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.

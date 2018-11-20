@@ -277,9 +277,8 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fa fa-globe"></span>
+    <span class="fa fa-home"></span>
      
-    Overview
   </a>
 </li>
 <li>
@@ -287,13 +286,6 @@ $(document).ready(function () {
     <span class="fa fa-cube"></span>
      
     Packages
-  </a>
-</li>
-<li>
-  <a href="installation.html">
-    <span class="fa fa-download"></span>
-     
-    Installation
   </a>
 </li>
 <li>
@@ -324,13 +316,6 @@ $(document).ready(function () {
     Publications
   </a>
 </li>
-<li>
-  <a href="development.html">
-    <span class="fa fa-wrench"></span>
-     
-    Development
-  </a>
-</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -351,6 +336,14 @@ $(document).ready(function () {
 <h1>MethodsLibrary</h1>
 <p>[Under development] A central repository for things related to the OHDSI Methods Library</p>
 <p>This builds the <a href="https://ohdsi.github.io/MethodsLibrary">Methods Library website</a>.</p>
+</div>
+<div id="requirements" class="section level1">
+<h1>Requirements</h1>
+<p>Make sure you have the icon package installed:</p>
+<pre class="r"><code>devtools::install_github(&quot;ropenscilabs/icon&quot;)</code></pre>
+<pre class="r"><code>shell(&quot;R -e &#39;rmarkdown::build_site()&#39;&quot;)
+
+shell(&quot;R -e rmarkdown::render_site()&quot;)</code></pre>
 </div>
 
 

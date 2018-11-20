@@ -6,15 +6,11 @@ output:
 navbar:
   title: "OHDSI Methods Library"
   left:
-    - text: "Overview"
-      icon: fa-globe
+    - icon: fa-home
       href: index.html
     - text: "Packages"
       icon: fa-cube
       href: packages.html
-    - text: "Installation"
-      icon: fa-download
-      href: installation.html
     - text: "Learning"
       icon: fa-graduation-cap
       href: learning.html
@@ -27,6 +23,3 @@ navbar:
     - text: "Publications"
       icon: fa-pen-alt
       href: publications.html
-    - text: "Development"
-      icon: fa-wrench
-      href: development.html  
