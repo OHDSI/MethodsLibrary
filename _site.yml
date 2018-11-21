@@ -3,6 +3,7 @@ output_dir: "docs"
 output:
   html_document:
     theme: cosmo
+exclude: ["extras"]
 navbar:
   title: "OHDSI Methods Library"
   left:

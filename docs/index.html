@@ -11,7 +11,7 @@
 
 
 
-<title>Overview</title>
+<title>OHDSI Methods Library</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -428,12 +428,24 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Overview</h1>
+<h1 class="title toc-ignore">OHDSI Methods Library</h1>
 
 </div>
 
 
-<p>The methods library consists of a set of R packages that can be used to execute observational studies against data in the Common Data Model (CDM) format.</p>
+<p>The methods library consists of a set of R packages that can be used to execute observational studies. It provides functions for performing characterization, population-level causal effect estimation, and patient-level prediction.</p>
+<div id="common-data-model" class="section level2">
+<h2>Common Data Model</h2>
+<p>The methods library requires access to data in the <a href="https://github.com/OHDSI/CommonDataModel">Common Data Model</a>.</p>
+</div>
+<div id="cohorts" class="section level2">
+<h2>Cohorts</h2>
+<p>One of the essential inputs for the library are <em>cohorts</em>.</p>
+<blockquote>
+<p>A <strong>cohort</strong> is a set of persons who satisfy one or more inclusion criteria for a duration of time.</p>
+</blockquote>
+<p>The method library operates on cohorts, such as exposure cohorts and outcome cohorts, but does not provide functionality for constructing cohorts. One can create cohorts using SQL, or use interactive tools such as <a href="http://www.ohdsi.org/web/atlas">ATLAS</a>.</p>
+</div>
 
 
 
