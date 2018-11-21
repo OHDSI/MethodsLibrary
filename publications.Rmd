@@ -8,4 +8,34 @@ output:
 
 # Clinical application
 
+- Vashisht R, Jung K, Schuler A and et al. [Association of hemoglobin a1c levels with use of sulfonylureas, dipeptidyl peptidase 4 inhibitors, and thiazolidinediones in patients with type 2 diabetes treated with metformin: Analysis from the observational health data sciences and informatics initiative.](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2698083) JAMA Network Open. 2018; 1: e181755.
+
+- Ryan PB, Buse JB, Schuemie MJ, et al. [Comparative effectiveness of canagliflozin, SGLT2 inhibitors and non-SGLT2 inhibitors on the risk of hospitalization for heart failure and amputation in patients with type 2 diabetes mellitus: A real-world meta-analysis of 4 observational databases (OBSERVE-4D).](https://onlinelibrary.wiley.com/doi/full/10.1111/dom.13424) Diabetes, obesity & metabolism. 2018; 20: 2585-97.
+
+- Yuan Z, DeFalco FJ, Ryan PB, et al. [Risk of lower extremity amputations in people with type 2 diabetes mellitus treated with sodium-glucose co-transporter-2 inhibitors in the USA: A retrospective cohort study.](https://onlinelibrary.wiley.com/doi/full/10.1111/dom.13115) Diabetes, obesity & metabolism. 2018; 20: 582-9.
+
+- Weinstein RB, Ryan P, Berlin JA, et al. [Channeling in the Use of Nonprescription Paracetamol and Ibuprofen in an Electronic Medical Records Database: Evidence and Implications.](https://rd.springer.com/article/10.1007/s40264-017-0581-7) Drug safety. 2017; 40: 1279-92.
+
+- Wang Y, Desai M, Ryan PB, et al. [Incidence of diabetic ketoacidosis among patients with type 2 diabetes mellitus treated with SGLT2 inhibitors and other antihyperglycemic agents.](https://www.sciencedirect.com/science/article/pii/S0168822716318629) Diabetes Res Clin Pract. 2017; 128: 83-90.
+
+- Ryan PB, Schuemie MJ, Ramcharran D and Stang PE. [Atypical Antipsychotics and the Risks of Acute Kidney Injury and Related Outcomes Among Older Adults: A Replication Analysis and an Evaluation of Adapted Confounding Control Strategies](https://rd.springer.com/article/10.1007%2Fs40266-016-0430-x). Drugs & aging. 2017; 34: 211-9.
+
+- Ramcharran D, Qiu H, [Schuemie MJ and Ryan PB. Atypical Antipsychotics and the Risk of Falls and Fractures Among Older Adults: An Emulation Analysis and an Evaluation of Additional Confounding Control Strategies.](https://journals.lww.com/psychopharmacology/Abstract/2017/04000/Atypical_Antipsychotics_and_the_Risk_of_Falls_and.9.aspx) J Clin Psychopharmacol. 2017; 37: 162-8.
+
+- Duke JD, Ryan PB, Suchard MA, et al. [Risk of angioedema associated with levetiracetam compared with phenytoin: Findings of the observational health data sciences and informatics research network.](https://onlinelibrary.wiley.com/doi/full/10.1111/epi.13828) Epilepsia. 2017; 58: e101-e6.
+
+
 # Methods research
+
+- Reps JM, Schuemie MJ, Suchard MA, Ryan PB, Rijnbeek PR. [Design and implementation of a standardized framework to generate and evaluate patient-level prediction models using observational healthcare data.](https://academic.oup.com/jamia/article/25/8/969/4989437) J Am Med Inform Assoc. 2018;25(8):969-975.
+
+- Schuemie MJ, Ryan PB, Hripcsak G, Madigan D and Suchard MA. [Improving reproducibility by using high-throughput observational studies with empirical calibration.](http://rsta.royalsocietypublishing.org/content/376/2128/20170356.long) Philosophical transactions Series A, Mathematical, physical, and engineering sciences. 2018; 376.
+
+- Tian Y, Schuemie MJ and Suchard MA. [Evaluating large-scale propensity score performance through real-world and synthetic data experiments.](https://academic.oup.com/ije/advance-article-abstract/doi/10.1093/ije/dyy120/5043131) International journal of epidemiology. 2018.
+
+- Schuemie MJ, Hripcsak G, Ryan PB, Madigan D and Suchard MA. [Empirical confidence interval calibration for population-level effect estimation studies in observational healthcare data.](http://www.pnas.org/content/115/11/2571.long) Proceedings of the National Academy of Sciences of the United States of America. 2018; 115: 2571-7.
+
+- Schuemie MJ, Hripcsak G, Ryan PB, Madigan D and Suchard MA. [Robust empirical calibration of p-values using observational data.](https://onlinelibrary.wiley.com/doi/10.1002/sim.6977) Statistics in medicine. 2016; 35: 3883-8.
+
+- Schuemie MJ, Ryan PB, DuMouchel W, Suchard MA and Madigan D. [Interpreting observational studies: why empirical calibration is needed to correct p-values.](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.5925) Statistics in medicine. 2014; 33: 209-18.
+

@@ -8,4 +8,6 @@ output:
 
 # Forums
 
+Questions about the Methods Library can be asked on the [OHDSI Forums](http://forums.ohdsi.org/).
+
 # Issue trackers

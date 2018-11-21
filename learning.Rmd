@@ -5,3 +5,14 @@ output:
         toc: TRUE
         toc_float: TRUE
 ---
+
+# Software Installation
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/K9_0s2Rchbo" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0UhhAEX2dqs" frameborder="0" allowfullscreen></iframe>
+
+
+# Patient-Level Prediction
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BEukCbT8UoA" frameborder="0" allowfullscreen></iframe>
