@@ -388,20 +388,6 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="learning.html">
-    <span class="fa fa-graduation-cap"></span>
-     
-    Learning
-  </a>
-</li>
-<li>
-  <a href="support.html">
-    <span class="fa fa-life-ring"></span>
-     
-    Support
-  </a>
-</li>
-<li>
   <a href="validation.html">
     <span class="fa fa-clipboard-check"></span>
      
@@ -413,6 +399,20 @@ div.tocify {
     <span class="fa fa-pen-alt"></span>
      
     Publications
+  </a>
+</li>
+<li>
+  <a href="support.html">
+    <span class="fa fa-life-ring"></span>
+     
+    Support
+  </a>
+</li>
+<li>
+  <a href="contribute.html">
+    <span class="fa fa-wrench"></span>
+     
+    Contribute
   </a>
 </li>
       </ul>
@@ -434,72 +434,84 @@ div.tocify {
 
 <div id="population-level-estimation" class="section level1">
 <h1>Population-level estimation</h1>
-<p>The methods library consists of a set of R packages that can be used to execute observational studies against data in the Common Data Model (CDM) format. The following packages are available:</p>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> CohortMethod</h2>
-<p>New-user cohort studies using large-scale regression for propensity and outcome models</p>
+<p>CohortMethod is an R package for performing new-user cohort studies in an observational database in the OMOP Common Data Model. It extracts the necessary data from a database in OMOP Common Data Model format, and uses a large set of covariates for both the propensity and outcome model, including for example all drugs, diagnoses, procedures, as well as age, comorbidity indexes, etc. Large scale regularized regression is used to fit the propensity and outcome models. Functions are included for trimming, stratifying and matching on propensity scores, as well as diagnostic functions, such as propensity score distribution plots and plots showing covariate balance before and after matching and/or trimming. Supported outcome models are (conditional) logistic regression, (conditional) Poisson regression, and (stratified) Cox regression.</p>
 <p><a href="https://ohdsi.github.io/CohortMethod">Learn more …</a></p>
 </div>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> SelfControlledCaseSeries</h2>
-<p>Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.</p>
+<p>SelfControlledCaseSeries is an R package for performing self- controlled case series (SCCS) analyses in an observational database in the OMOP Common Data Model.</p>
+<p><a href="https://ohdsi.github.io/SelfControlledCaseSeries">Learn more …</a></p>
 </div>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> SelfControlledCohort</h2>
-<p>A self-controlled cohort design, where time preceding exposure is used as control.</p>
+<p>This package provides a method to estimate risk by comparing time exposed with time unexposed among the exposed cohort.</p>
+<p><a href="https://ohdsi.github.io/SelfControlledCohort">Learn more …</a></p>
 </div>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> CaseControl</h2>
-<p>Case-control studies, matching controls on age, gender, provider, and visit date. Allows nesting of the study in another cohort.</p>
+<p>CaseControl is an R package for performing (nested) matched case-control analyses in an observational database in the OMOP Common Data Model.</p>
+<p><a href="https://ohdsi.github.io/CaseControl">Learn more …</a></p>
 </div>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> CaseCrossover</h2>
-<p>including the option to adjust for time-trends in exposures (so-called case-time-control).</p>
+<p>An R package for performing case-crossover and case-time-control analyses in an observational database in the OMOP Common Data Model.</p>
+<p><a href="https://ohdsi.github.io/CaseCrossover">Learn more …</a></p>
 </div>
 </div>
 <div id="patient-level-prediction" class="section level1">
-<h1>Patient-Level prediction</h1>
+<h1>Patient-level prediction</h1>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> PatientLevelPrediction</h2>
-<p>Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.</p>
+<p>A package for creating patient level prediction models. Given a cohort of interest and an outcome of interest, the package can use data in the OMOP Common Data Model to build a large set of features. These features can then be assessed to fit a predictive model using a number of machine learning algorithms. Several performance measures are implemented for model evaluation.</p>
+<p><a href="https://github.com/OHDSI/PatientLevelPrediction">Learn more …</a></p>
 </div>
 </div>
 <div id="method-characterization" class="section level1">
 <h1>Method characterization</h1>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> EmpiricalCalibration</h2>
-<p>Use negative and positive control exposure-outcome pairs to profile and calibrate a particular analysis design.</p>
+<p>Routines for performing empirical calibration of observational study estimates. By using a set of negative control hypotheses we can estimate the empirical null distribution of a particular observational study setup. This empirical null distribution can be used to compute a calibrated p-value, which reflects the probability of observing an estimated effect size when the null hypothesis is true taking both random and systematic error into account. A similar approach can be used to calibrate confidence intervals, using both negative and positive controls.</p>
+<p><a href="https://ohdsi.github.io/EmpiricalCalibration">Learn more …</a></p>
 </div>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> MethodEvaluation</h2>
-<p>Use real data and established reference sets to evaluate the performance of methods.</p>
+<p>This package contains resources for the evaluation of the performance of methods that aim to estimate the magnitude (relative risk) of the effect of a drug on an outcome. These resources include reference sets for evaluating methods on real data, as well as functions for inserting simulated effects in real data based on negative control drug-outcome pairs. Further included are functions for the computation of the minimum detectable relative risks and functions for computing performance statistics such as predictive accuracy, error and bias.</p>
+<p><a href="https://ohdsi.github.io/MethodEvaluation">Learn more …</a></p>
 </div>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> EvidenceSynthesis</h2>
-<p>Combining study diagnostics and results across multiple sites.</p>
+<p>Routines for combining evidence and diagnostics across multiple sources, such as multiple data sites in a distributed study. This includes functions for performing meta-analysis and forest plots.</p>
+<p><a href="https://github.com/OHDSI/EvidenceSynthesis">Learn more …</a></p>
 </div>
 </div>
 <div id="supporting-packages" class="section level1">
 <h1>Supporting packages</h1>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> Cyclops</h2>
-<p>Highly efficient implementation of regularized logistic, Poisson and Cox regression.</p>
-</div>
-<div class="section level2">
-<h2><i class="fas  fa-cube "></i> FeatureExtraction</h2>
-<p>Automatically extract large sets of features for user-specified cohorts using data in the CDM.</p>
+<p>This model fitting tool incorporates cyclic coordinate descent and majorization-minimization approaches to fit a variety of regression models found in large-scale observational healthcare data. Implementations focus on computational optimization and fine-scale parallelization to yield efficient inference in massive datasets. Please see: Suchard, Simpson, Zorych, Ryan and Madigan (2013) <a href="doi:10.1145/2414416.2414791" class="uri">doi:10.1145/2414416.2414791</a>.</p>
+<p><a href="https://github.com/OHDSI/Cyclops">Learn more …</a></p>
 </div>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> DatabaseConnector</h2>
+<p>An R ‘DataBase Interface’ (‘DBI’) compatible interface to various database platforms (‘PostgreSQL’, ‘Oracle’, ‘Microsoft SQL Server’, ‘Amazon Redshift’, ‘Microsoft Parallel Database Warehouse’, ‘IBM Netezza’, ‘Apache Impala’, and ‘Google BigQuery’). Also includes support for fetching data as ‘ffdf’ objects. Uses ‘Java Database Connectivity’ (‘JDBC’) to connect to databases.</p>
+<p><a href="https://ohdsi.github.io/DatabaseConnector">Learn more …</a></p>
 </div>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> SqlRender</h2>
-<p>Generate SQL on the fly for the various SQL dialects.</p>
+<p>A rendering tool for parameterized SQL that also translates into different SQL dialects. These dialects include ‘Microsoft Sql Server’, ‘Oracle’, ‘PostgreSql’, ‘Amazon RedShift’, ‘Apache Impala’, ‘IBM Netezza’, ‘Google BigQuery’, and ‘Microsoft PDW’.</p>
 <p><a href="https://ohdsi.github.io/SqlRender">Learn more …</a></p>
 </div>
 <div class="section level2">
 <h2><i class="fas  fa-cube "></i> ParallelLogger</h2>
-<p>An R package for easy parallel computing, logging, and function call automation.</p>
+<p>Support for parallel computation with progress bar, and option to stop or proceed on errors. Also provides logging to console and disk, and the logging persists in the parallel threads. Additional functions support function call automation with delayed execution (e.g. for executing functions in parallel).</p>
+<p><a href="https://ohdsi.github.io/ParallelLogger">Learn more …</a></p>
+</div>
+<div class="section level2">
+<h2><i class="fas  fa-cube "></i> FeatureExtraction</h2>
+<p>An R package for generating features (covariates) for a cohort using data in the Common Data Model.</p>
+<p><a href="https://ohdsi.github.io/FeatureExtraction">Learn more …</a></p>
 </div>
 </div>
 

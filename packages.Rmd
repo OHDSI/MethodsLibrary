@@ -1,74 +1,143 @@
 ---
-title: "Packages"
+title: 'Packages'
 output: 
     html_document:
         toc: TRUE
         toc_float: TRUE
 ---
-
 # Population-level estimation
 
-The methods library consists of a set of R packages that can be used to execute observational studies against data in the Common Data Model (CDM) format. The following packages are available:
+## `r icon::fa('cube')` CohortMethod 
 
-## `r icon::fa("cube")`  CohortMethod
-New-user cohort studies using large-scale regression for propensity and outcome models
+CohortMethod is an R package for performing new-user cohort studies
+    in an observational database in the OMOP Common Data Model. It extracts the
+    necessary data from a database in OMOP Common Data Model format, and uses a
+    large set of covariates for both the propensity and outcome model, including for
+    example all drugs, diagnoses, procedures, as well as age, comorbidity indexes,
+    etc. Large scale regularized regression is used to fit the propensity and
+    outcome models. Functions are included for trimming, stratifying and matching
+    on propensity scores, as well as diagnostic functions, such as propensity score
+    distribution plots and plots showing covariate balance before and after matching
+    and/or trimming. Supported outcome models are (conditional) logistic regression,
+    (conditional) Poisson regression, and (stratified) Cox regression.
 
 [Learn more ...](https://ohdsi.github.io/CohortMethod)
 
-## `r icon::fa("cube")`  SelfControlledCaseSeries
-Self-Controlled Case Series analysis using few or many predictors, includes splines for age and seasonality.
+## `r icon::fa('cube')` SelfControlledCaseSeries 
 
+SelfControlledCaseSeries is an R package for performing self-
+    controlled case series (SCCS) analyses in an observational database in the OMOP
+    Common Data Model.
 
-## `r icon::fa("cube")`  SelfControlledCohort
-A self-controlled cohort design, where time preceding exposure is used as control.
+[Learn more ...](https://ohdsi.github.io/SelfControlledCaseSeries)
 
+## `r icon::fa('cube')` SelfControlledCohort 
 
-## `r icon::fa("cube")`  CaseControl
-Case-control studies, matching controls on age, gender, provider, and visit date. Allows nesting of the study in another cohort.
+This package provides a method to estimate risk by comparing time
+    exposed with time unexposed among the exposed cohort.
 
+[Learn more ...](https://ohdsi.github.io/SelfControlledCohort)
 
-## `r icon::fa("cube")`  CaseCrossover
-including the option to adjust for time-trends in exposures (so-called case-time-control).
+## `r icon::fa('cube')` CaseControl 
 
+CaseControl is an R package for performing (nested) matched case-control analyses in an observational database in the OMOP Common Data Model.
 
-# Patient-Level prediction
+[Learn more ...](https://ohdsi.github.io/CaseControl)
 
+## `r icon::fa('cube')` CaseCrossover 
 
-## `r icon::fa("cube")` PatientLevelPrediction
-Build and evaluate predictive models for user-specified outcomes, using a wide array of machine learning algorithms.
+An R package for performing case-crossover and case-time-control analyses in an observational database in the OMOP Common Data Model.
+
+[Learn more ...](https://ohdsi.github.io/CaseCrossover)
+
+# Patient-level prediction
+
+## `r icon::fa('cube')` PatientLevelPrediction 
+
+A package for creating patient level prediction models. Given a
+    cohort of interest and an outcome of interest, the package can use data in the
+    OMOP Common Data Model to build a large set of features. These features can then
+    be assessed to fit a predictive model using a number of machine learning algorithms.
+    Several performance measures are implemented for model evaluation.
+
+[Learn more ...](https://github.com/OHDSI/PatientLevelPrediction)
 
 # Method characterization
 
-## `r icon::fa("cube")` EmpiricalCalibration
-Use negative and positive control exposure-outcome pairs to profile and calibrate a particular analysis design.
+## `r icon::fa('cube')` EmpiricalCalibration 
 
+Routines for performing empirical calibration of observational
+    study estimates. By using a set of negative control hypotheses we can
+    estimate the empirical null distribution of a particular observational
+    study setup. This empirical null distribution can be used to compute a
+    calibrated p-value, which reflects the probability of observing an
+    estimated effect size when the null hypothesis is true taking both random
+    and systematic error into account. A similar approach can be used to
+	calibrate confidence intervals, using both negative and positive controls.
 
-## `r icon::fa("cube")`  MethodEvaluation
-Use real data and established reference sets to evaluate the performance of methods.
+[Learn more ...](https://ohdsi.github.io/EmpiricalCalibration)
 
+## `r icon::fa('cube')` MethodEvaluation 
 
-## `r icon::fa("cube")`  EvidenceSynthesis
-Combining study diagnostics and results across multiple sites.
+This package contains resources for the evaluation of the
+    performance of methods that aim to estimate the magnitude (relative risk) of
+    the effect of a drug on an outcome. These resources include reference sets for
+    evaluating methods on real data, as well as functions for inserting simulated
+    effects in real data based on negative control drug-outcome pairs. Further
+    included are functions for the computation of the minimum detectable relative
+    risks and functions for computing performance statistics such as predictive
+    accuracy, error and bias.
 
+[Learn more ...](https://ohdsi.github.io/MethodEvaluation)
+
+## `r icon::fa('cube')` EvidenceSynthesis 
+
+Routines for combining evidence and diagnostics across multiple 
+   sources, such as multiple data sites in a distributed study. This includes functions
+   for performing meta-analysis and forest plots.
+
+[Learn more ...](https://github.com/OHDSI/EvidenceSynthesis)
 
 # Supporting packages
 
-## `r icon::fa("cube")`  Cyclops
-Highly efficient implementation of regularized logistic, Poisson and Cox regression.
+## `r icon::fa('cube')` Cyclops 
 
+This model fitting tool incorporates cyclic coordinate descent and
+    majorization-minimization approaches to fit a variety of regression models
+    found in large-scale observational healthcare data.  Implementations focus
+    on computational optimization and fine-scale parallelization to yield
+    efficient inference in massive datasets.  Please see:
+    Suchard, Simpson, Zorych, Ryan and Madigan (2013) <doi:10.1145/2414416.2414791>.
 
-## `r icon::fa("cube")`  FeatureExtraction
-Automatically extract large sets of features for user-specified cohorts using data in the CDM.
+[Learn more ...](https://github.com/OHDSI/Cyclops)
 
+## `r icon::fa('cube')` DatabaseConnector 
 
-## `r icon::fa("cube")` DatabaseConnector
+An R 'DataBase Interface' ('DBI') compatible interface to various database platforms ('PostgreSQL', 'Oracle', 'Microsoft SQL Server', 
+    'Amazon Redshift', 'Microsoft Parallel Database Warehouse', 'IBM Netezza', 'Apache Impala', and 'Google BigQuery'). Also includes support for
+    fetching data as 'ffdf' objects. Uses 'Java Database Connectivity' ('JDBC') to connect to databases.
 
+[Learn more ...](https://ohdsi.github.io/DatabaseConnector)
 
-## `r icon::fa("cube")` SqlRender
-Generate SQL on the fly for the various SQL dialects.
+## `r icon::fa('cube')` SqlRender 
+
+A rendering tool for parameterized SQL that also translates into
+    different SQL dialects.  These dialects include 'Microsoft Sql Server', 'Oracle', 
+    'PostgreSql', 'Amazon RedShift', 'Apache Impala', 'IBM Netezza', 'Google BigQuery', and 'Microsoft PDW'.
 
 [Learn more ...](https://ohdsi.github.io/SqlRender)
 
+## `r icon::fa('cube')` ParallelLogger 
 
-## `r icon::fa("cube")` ParallelLogger
-An R package for easy parallel computing, logging, and function call automation.
+Support for parallel computation with progress bar, and option to stop or proceed on errors. Also provides logging to console and disk, 
+    and the logging persists in the parallel threads. Additional functions support function call automation with delayed execution (e.g. for executing functions in
+    parallel).
+
+[Learn more ...](https://ohdsi.github.io/ParallelLogger)
+
+## `r icon::fa('cube')` FeatureExtraction 
+
+An R package for generating features (covariates) for a cohort using data in the Common Data Model.
+
+[Learn more ...](https://ohdsi.github.io/FeatureExtraction)
+

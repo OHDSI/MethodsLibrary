@@ -1,0 +1,15 @@
+order,name,section,inCran,pages
+1,CohortMethod,Population-level estimation,FALSE,TRUE
+2,SelfControlledCaseSeries,Population-level estimation,FALSE,TRUE
+3,SelfControlledCohort,Population-level estimation,FALSE,TRUE
+4,CaseControl,Population-level estimation,FALSE,TRUE
+5,CaseCrossover,Population-level estimation,FALSE,TRUE
+6,PatientLevelPrediction,Patient-level prediction,FALSE,FALSE
+7,EmpiricalCalibration,Method characterization,TRUE,TRUE
+8,MethodEvaluation,Method characterization,FALSE,FALSE
+9,EvidenceSynthesis,Method characterization,FALSE,FALSE
+10,Cyclops,Supporting packages,TRUE,FALSE
+11,DatabaseConnector,Supporting packages,TRUE,TRUE
+12,SqlRender,Supporting packages,TRUE,TRUE
+13,ParallelLogger,Supporting packages,TRUE,TRUE
+14,FeatureExtraction,Supporting packages,FALSE,TRUE

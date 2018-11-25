@@ -1,0 +1,25 @@
+---
+title: "Contribute"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+# File bug reports, write help files, write unit tests
+
+...
+
+# Adding methods
+
+We are always looking for new methods and packages to add to the Methods Libary. However, in order to qualify for inclusion a package must meet the following requirements:
+
+- Pass R check without warnings or notes.
+- Adhere to OHDSI's code style guidelines and overall development practices.
+- Have unit tests that test the package's most important routines.
+- For population-level estimation methods: be evaluated using the OHDSI Methods Benchmark.
+
+# Code style guidelines
+
+- [Style guide for R code]()
+- [Style guide for SQL code]()

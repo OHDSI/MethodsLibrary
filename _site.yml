@@ -12,15 +12,15 @@ navbar:
     - text: "Packages"
       icon: fa-cube
       href: packages.html
-    - text: "Learning"
-      icon: fa-graduation-cap
-      href: learning.html
-    - text: "Support"
-      icon: fa-life-ring
-      href: support.html      
     - text: "Validation"
       icon: fa-clipboard-check
       href: validation.html  
     - text: "Publications"
       icon: fa-pen-alt
       href: publications.html
+    - text: "Support"
+      icon: fa-life-ring
+      href: support.html      
+    - text: "Contribute"
+      icon: fa-wrench
+      href: contribute.html
