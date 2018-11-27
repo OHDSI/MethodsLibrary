@@ -8,7 +8,7 @@ order,name,section,inCran,pages
 7,EmpiricalCalibration,Method characterization,TRUE,TRUE
 8,MethodEvaluation,Method characterization,FALSE,FALSE
 9,EvidenceSynthesis,Method characterization,FALSE,FALSE
-10,Cyclops,Supporting packages,TRUE,FALSE
+10,Cyclops,Supporting packages,TRUE,TRUE
 11,DatabaseConnector,Supporting packages,TRUE,TRUE
 12,SqlRender,Supporting packages,TRUE,TRUE
 13,ParallelLogger,Supporting packages,TRUE,TRUE
