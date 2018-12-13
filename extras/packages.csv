@@ -6,7 +6,7 @@ order,name,section,inCran,pages
 5,CaseCrossover,Population-level estimation,FALSE,TRUE
 6,PatientLevelPrediction,Patient-level prediction,FALSE,FALSE
 7,EmpiricalCalibration,Method characterization,TRUE,TRUE
-8,MethodEvaluation,Method characterization,FALSE,FALSE
+8,MethodEvaluation,Method characterization,FALSE,TRUE
 9,EvidenceSynthesis,Method characterization,FALSE,FALSE
 10,Cyclops,Supporting packages,TRUE,TRUE
 11,DatabaseConnector,Supporting packages,TRUE,TRUE
