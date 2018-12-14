@@ -1,10 +1,11 @@
 ---
-title: "OHDSI Methods Library"
+title: '<div><img src="ohdsi40x40.png"></img> OHDSI Methods Library</div>'
 output: 
     html_document:
         toc: TRUE
         toc_float: TRUE
 ---
+
 The OHDSI Methods Library is a set of open source R packages for large scale analytics, including population characterization, population-level causal effect estimation, and patient-level prediction.
 
 The packages offer R functions that together can be used to perform an observation study from data to estimates and supporting statistics, figures, and tables. The packages interact directly with observational data in the Common Data Model (CDM),  and are designed to support both large datasets and large numbers of analyses (e.g. for testing many hypotheses including control hypotheses, and testing many analyses design variations). For this purpose, each Method package includes functions for specifying and subsequently executing multiple analyses efficiently. The Methods Library support best practices for use of observational data as learned from previous and ongoing research, such as transparency, reproducibility, as well as measuring of the operating characteristics of methods in a particular context and subsequent empirical calibration of estimates produced by the methods.
@@ -14,7 +15,7 @@ The Methods Library is a set of R packages that execute against data in a databa
 
 
 ## Common Data Model
-The Methods Library requires access to observational health care data in the [Common Data Model](https://github.com/OHDSI/CommonDataModel). 
+The Methods Library requires access to observational health care data in the [Common Data Model](https://github.com/OHDSI/CommonDataModel/wiki). 
 
 
 ## Cohorts
