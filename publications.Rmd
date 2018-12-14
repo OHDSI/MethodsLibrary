@@ -6,6 +6,8 @@ output:
         toc_float: TRUE
 ---
 
+These papers were written using the OHDSI Methods Library.
+
 # Clinical application
 
 - Vashisht R, Jung K, Schuler A and et al. [Association of hemoglobin a1c levels with use of sulfonylureas, dipeptidyl peptidase 4 inhibitors, and thiazolidinediones in patients with type 2 diabetes treated with metformin: Analysis from the observational health data sciences and informatics initiative.](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2698083) JAMA Network Open. 2018; 1: e181755.

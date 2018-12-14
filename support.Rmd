@@ -16,7 +16,11 @@ Bug reports should be files using the issue tracker of the misbehaving package.
 
 # Software Installation
 
+This video describes how to install the software environment needed to start working with the Methods Library:
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K9_0s2Rchbo" frameborder="0" allowfullscreen></iframe>
+
+This next video describes how to install packages in the Methods Library:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0UhhAEX2dqs" frameborder="0" allowfullscreen></iframe>
 
