@@ -3,6 +3,8 @@ output_dir: "docs"
 output:
   html_document:
     theme: cosmo
+    includes:
+      in_header: "favicon.html" 
 exclude: ["extras"]
 navbar:
   title: "OHDSI Methods Library"
