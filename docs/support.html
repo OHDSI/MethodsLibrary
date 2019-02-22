@@ -11,7 +11,7 @@
 
 
 
-<title>Support</title>
+<title>Questions and Bug Reports</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -101,6 +101,9 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -403,12 +406,22 @@ div.tocify {
     Publications
   </a>
 </li>
-<li>
-  <a href="support.html">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-life-ring"></span>
      
     Support
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="support.html">Questions and Bug reports</a>
+    </li>
+    <li>
+      <a href="rSetup.html">R setup</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="contribute.html">
@@ -429,7 +442,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Support</h1>
+<h1 class="title toc-ignore">Questions and Bug Reports</h1>
 
 </div>
 
@@ -441,15 +454,6 @@ div.tocify {
 <div id="bug-reports" class="section level1">
 <h1>Bug reports</h1>
 <p>Bug reports should be files using the issue tracker of the misbehaving package.</p>
-</div>
-<div id="software-installation" class="section level1">
-<h1>Software Installation</h1>
-<p>This video describes how to install the software environment needed to start working with the Methods Library:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/K9_0s2Rchbo" frameborder="0" allowfullscreen>
-</iframe>
-<p>This next video describes how to install packages in the Methods Library:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0UhhAEX2dqs" frameborder="0" allowfullscreen>
-</iframe>
 </div>
 
 

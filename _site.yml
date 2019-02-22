@@ -22,7 +22,11 @@ navbar:
       href: publications.html
     - text: "Support"
       icon: fa-life-ring
-      href: support.html      
+      menu: 
+        - text: "Questions and Bug reports"
+          href: support.html   
+        - text: "R setup"
+          href: rSetup.html  
     - text: "Contribute"
       icon: fa-wrench
       href: contribute.html

@@ -101,6 +101,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -402,12 +405,22 @@ div.tocify {
     Publications
   </a>
 </li>
-<li>
-  <a href="support.html">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-life-ring"></span>
      
     Support
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="support.html">Questions and Bug reports</a>
+    </li>
+    <li>
+      <a href="rSetup.html">R setup</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="contribute.html">

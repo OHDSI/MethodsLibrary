@@ -11,7 +11,7 @@
 
 
 
-<title>Contribute</title>
+<title>Setting up the R environment</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -442,39 +442,77 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Contribute</h1>
+<h1 class="title toc-ignore">Setting up the R environment</h1>
 
 </div>
 
 
-<div id="file-bug-reports" class="section level1">
-<h1>File bug reports</h1>
-<p>If you’ve found a bug you can help out by filing a bug report. Each package has an issue tracker where you can create a new issue. Try and be as specific as possible. What error message occurs? Can you provide a simple example to reproduce the problem? What versions of the various packages are you running?</p>
-</div>
-<div id="write-help-files" class="section level1">
-<h1>Write help files</h1>
-<p>If you’re a bit more experienced with the Methods Library and are looking to improve your open source development skills, the next step up is to contribute a pull request to a Methods Library package. The most important thing to know is that Methods Library packages use <a href="https://github.com/klutometis/roxygen">roxygen2</a>: this means that documentation is found in the R code close to the source of each function.</p>
-</div>
-<div id="write-unit-tests" class="section level1">
-<h1>Write unit tests</h1>
-<p>An important part of validating the methods in the library is unit testing. A unit test is a small program that tests a specific function in the library. For example, there are <a href="https://github.com/OHDSI/CohortMethod/blob/master/tests/testthat/test-psFunctions.R#L5">several unit tests</a> that make sure the propensity score matching works correctly. We can never have enough unit tests, and writing unit tests is an excellent way to learn how the Methods Library packages work under the hood.</p>
-</div>
-<div id="add-methods" class="section level1">
-<h1>Add methods</h1>
-<p>We are always looking for new methods and packages to add to the Methods Libary. However, in order to qualify for inclusion a package must meet the following requirements:</p>
+<p>Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed: R, RTools (on Windows), RStudio, and Java.</p>
 <ul>
-<li>Pass R check without warnings or notes.</li>
-<li>Adhere to <a href="https://ohdsi.github.io/MethodsLibrary/contribute.html#code_style_guidelines">OHDSI’s code style guidelines</a> and overall development practices.</li>
-<li>Have <a href="http://www.ohdsi.org/web/wiki/doku.php?id=development:unit_testing_in_r">unit tests</a> that test the package’s most important routines.</li>
-<li>For population-level estimation methods: be evaluated using the OHDSI Methods Benchmark.</li>
+<li>R is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface.</li>
+<li>RTools is a set of programs that is required on Windows to build R packages from source.</li>
+<li>RStudio is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.</li>
+<li>Java is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.</li>
 </ul>
+<div id="instructions-for-windows" class="section level1">
+<h1>Instructions for Windows</h1>
+<p>A video version of these instructions can be found at <a href="https://youtu.be/K9_0s2Rchbo" class="uri">https://youtu.be/K9_0s2Rchbo</a>.</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="86%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><img src="images/warn.png" /><br />
+</td>
+<td><strong>In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you <em>must</em> also install Java in both architectures. It is recommended to only install the 64-bit version of R</strong>.</td>
+</tr>
+</tbody>
+</table>
+<div id="installing-r" class="section level2">
+<h2>Installing R</h2>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘base’, then click the Download link highlighted below. <img src="images/downloadR.png" /></p></li>
+<li><p>After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, disable the 32-bit architecture as also shown below. <img src="images/rDestination.png" /></p>
+<p><img src="images/no32Bits.png" /></p></li>
+</ol>
+<p>Once completed, you should be able to select R from your Start Menu.</p>
 </div>
-<div id="code-style-guidelines" class="section level1">
-<h1>Code style guidelines</h1>
-<ul>
-<li><a href="http://www.ohdsi.org/web/wiki/doku.php?id=development:ohdsi_code_style_for_r">Style guide for R code</a></li>
-<li><a href="http://www.ohdsi.org/web/wiki/doku.php?id=development:ohdsi_code_style_for_sql">Style guide for SQL code</a></li>
-</ul>
+<div id="installing-rtools" class="section level2">
+<h2>Installing RTools</h2>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘Rtools’, and select the very latest version of RTools to download.</p></li>
+<li><p>After downloading has completed run the installer. Select the default options everywhere.</p></li>
+</ol>
+</div>
+<div id="installing-rstudio" class="section level2">
+<h2>Installing RStudio</h2>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a>, select ‘Download RStudio’ (or the ‘Download’ button under ‘RStudio’), opt for the free version, and download the installer for Windows as highlighted below. <img src="images/downloadRStudio.png" /></p></li>
+<li><p>After downloading, start the installer, and use the default options everywhere.</p></li>
+</ol>
+</div>
+<div id="installing-java" class="section level2">
+<h2>Installing Java</h2>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://java.com/en/download/manual.jsp" class="uri">https://java.com/en/download/manual.jsp</a>, and select the Windows 64-bit installer as highlighted below. If you also installed the 32-bit version of R, you <em>must</em> also install the other (32-bit) version of Java. <img src="images/downloadJava.png" /></p></li>
+<li><p>After downloading just run the installer.</p></li>
+</ol>
+</div>
+</div>
+<div id="verifying-the-installation" class="section level1">
+<h1>Verifying the installation</h1>
+<p>You should now be ready to go, but we should make sure. Start R-studio, and type</p>
+<pre class="r"><code>install.packages(&quot;SqlRender&quot;)
+library(SqlRender)
+translate(&quot;SELECT TOP 10 * FROM person;&quot;, &quot;postgresql&quot;)</code></pre>
+<pre><code>## [1] &quot;SELECT  * FROM person LIMIT 10;&quot;</code></pre>
+<p>This function uses Java, so if all goes well we know both R and Java have been installed correctly!</p>
+<p>Another test is to see if source packages can be built. Run the following R code to install the <code>CohortMethod</code> package from the OHDSI GitHub repository:</p>
+<pre class="r"><code>install.packages(&quot;drat&quot;)
+drat::addRepo(&quot;OHDSI&quot;)
+install.packages(&quot;CohortMethod&quot;)</code></pre>
 </div>
 
 
