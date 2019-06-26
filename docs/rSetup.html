@@ -74,6 +74,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 </head>
 
@@ -447,33 +448,26 @@ div.tocify {
 </div>
 
 
-<p>Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed: R, RTools (on Windows), RStudio, and Java.</p>
-<ul>
-<li>R is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface.</li>
-<li>RTools is a set of programs that is required on Windows to build R packages from source.</li>
-<li>RStudio is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.</li>
-<li>Java is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.</li>
-</ul>
+<p>Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed:</p>
+<ol style="list-style-type: decimal">
+<li><strong>R</strong> is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface.</li>
+<li><strong>RTools</strong> is a set of programs that is required on Windows to build R packages from source.</li>
+<li><strong>RStudio</strong> is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.</li>
+<li><strong>Java</strong> is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.</li>
+</ol>
 <div id="instructions-for-windows" class="section level1">
 <h1>Instructions for Windows</h1>
 <p>A video version of these instructions can be found at <a href="https://youtu.be/K9_0s2Rchbo" class="uri">https://youtu.be/K9_0s2Rchbo</a>.</p>
-<table>
-<colgroup>
-<col width="13%" />
-<col width="86%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><img src="images/warn.png" /><br />
-</td>
-<td><strong>In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you <em>must</em> also install Java in both architectures. It is recommended to only install the 64-bit version of R</strong>.</td>
-</tr>
-</tbody>
-</table>
+
+<div class="rmdimportant">
+In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you <strong>must</strong> also install Java in both architectures. It is recommended to only install the 64-bit version of R.
+</div>
+
 <div id="installing-r" class="section level2">
 <h2>Installing R</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘base’, then click the Download link highlighted below. <img src="images/downloadR.png" /></p></li>
+<li><p>Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘base’, then click the Download link highlighted in the screenshot below.</p>
+<p><img src="images/downloadR.png" /></p></li>
 <li><p>After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, disable the 32-bit architecture as also shown below. <img src="images/rDestination.png" /></p>
 <p><img src="images/no32Bits.png" /></p></li>
 </ol>

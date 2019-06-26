@@ -5,25 +5,25 @@ output:
         toc: TRUE
         toc_float: TRUE
 ---
-Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed: R, RTools (on Windows), RStudio, and Java.
+Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed: 
 
-- R is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface.
-- RTools is a set of programs that is required on Windows to build R packages from source.
-- RStudio is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.
-- Java is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.
+1. **R** is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface.
+2. **RTools** is a set of programs that is required on Windows to build R packages from source.
+3. **RStudio** is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.
+4. **Java** is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.
 
 # Instructions for Windows
 
 A video version of these instructions can be found at [https://youtu.be/K9_0s2Rchbo](https://youtu.be/K9_0s2Rchbo).
 
---------------------- ---------------------------------------------------------------------------------------------------------------------------------------------
-![](images/warn.png)\ **In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you *must* also install Java in both architectures. It is recommended to only install the 64-bit version of R**. 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```{block2, type='rmdimportant'}
+In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you **must** also install Java in both architectures. It is recommended to only install the 64-bit version of R.
+```
 
 ## Installing R
 
-1. Go to [https://cran.r-project.org/](https://cran.r-project.org/), click on 'Download R for Windows', then 'base', then click the Download link highlighted below.
+1. Go to [https://cran.r-project.org/](https://cran.r-project.org/), click on 'Download R for Windows', then 'base', then click the Download link highlighted in the screenshot below.
+
    ![](images/downloadR.png)
 
 2. After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, disable the 32-bit architecture as also shown below.
