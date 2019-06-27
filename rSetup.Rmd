@@ -22,7 +22,7 @@ In Windows, both R and Java come in 32-bit and 64-bits architectures. If you ins
 
 ## Installing R
 
-1. Go to [https://cran.r-project.org/](https://cran.r-project.org/), click on 'Download R for Windows', then 'base', then click the Download link highlighted in the screenshot below.
+1. Go to [https://cran.r-project.org/](https://cran.r-project.org/), click on 'Download R for Windows', then 'base', then click the Download link indicated in the screenshot below.
 
    ![](images/downloadR.png)
 

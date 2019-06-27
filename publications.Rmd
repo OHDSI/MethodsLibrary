@@ -10,9 +10,9 @@ These papers were written using the OHDSI Methods Library.
 
 # Clinical application
 
-- Johnston SS, Morton JM, Kalsekar I, Ammann EM, Hsiao CW, Reps J. [Using Machine Learning Applied to Real-World Healthcare Data for Predictive Analytics: An Applied Example in Bariatric Surgery.](https://www.sciencedirect.com/science/article/pii/S1098301519300737?via%3Dihub) Value Health. 2019 May;22(5):580-586. 
+- Johnston SS, Morton JM, Kalsekar I, et al. [Using Machine Learning Applied to Real-World Healthcare Data for Predictive Analytics: An Applied Example in Bariatric Surgery.](https://www.sciencedirect.com/science/article/pii/S1098301519300737?via%3Dihub) Value Health. 2019 May;22(5):580-586. 
 
-- Vashisht R, Jung K, Schuler A and et al. [Association of hemoglobin a1c levels with use of sulfonylureas, dipeptidyl peptidase 4 inhibitors, and thiazolidinediones in patients with type 2 diabetes treated with metformin: Analysis from the observational health data sciences and informatics initiative.](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2698083) JAMA Network Open. 2018; 1: e181755.
+- Vashisht R, Jung K, Schuler A, et al. [Association of hemoglobin a1c levels with use of sulfonylureas, dipeptidyl peptidase 4 inhibitors, and thiazolidinediones in patients with type 2 diabetes treated with metformin: Analysis from the observational health data sciences and informatics initiative.](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2698083) JAMA Network Open. 2018; 1: e181755.
 
 - Ryan PB, Buse JB, Schuemie MJ, et al. [Comparative effectiveness of canagliflozin, SGLT2 inhibitors and non-SGLT2 inhibitors on the risk of hospitalization for heart failure and amputation in patients with type 2 diabetes mellitus: A real-world meta-analysis of 4 observational databases (OBSERVE-4D).](https://onlinelibrary.wiley.com/doi/full/10.1111/dom.13424) Diabetes, obesity & metabolism. 2018; 20: 2585-97.
 
@@ -24,7 +24,9 @@ These papers were written using the OHDSI Methods Library.
 
 - Ryan PB, Schuemie MJ, Ramcharran D and Stang PE. [Atypical Antipsychotics and the Risks of Acute Kidney Injury and Related Outcomes Among Older Adults: A Replication Analysis and an Evaluation of Adapted Confounding Control Strategies](https://rd.springer.com/article/10.1007%2Fs40266-016-0430-x). Drugs & aging. 2017; 34: 211-9.
 
-- Ramcharran D, Qiu H, [Schuemie MJ and Ryan PB. Atypical Antipsychotics and the Risk of Falls and Fractures Among Older Adults: An Emulation Analysis and an Evaluation of Additional Confounding Control Strategies.](https://journals.lww.com/psychopharmacology/Abstract/2017/04000/Atypical_Antipsychotics_and_the_Risk_of_Falls_and.9.aspx) J Clin Psychopharmacol. 2017; 37: 162-8.
+- Ramcharran D, Qiu H, Schuemie MJ, et al. [Atypical Antipsychotics and the Risk of Falls and Fractures Among Older Adults: An Emulation Analysis and an Evaluation of Additional Confounding Control Strategies.](https://journals.lww.com/psychopharmacology/Abstract/2017/04000/Atypical_Antipsychotics_and_the_Risk_of_Falls_and.9.aspx) J Clin Psychopharmacol. 2017; 37: 162-8.
+
+- Boland MR, Parhi P, Li L, et al. [Uncovering exposures responsible for birth season - disease effects: a global study.](https://academic.oup.com/jamia/article/25/3/275/4265709) J Am Med Inform Assoc. 2017 Sep 28.
 
 - Duke JD, Ryan PB, Suchard MA, et al. [Risk of angioedema associated with levetiracetam compared with phenytoin: Findings of the observational health data sciences and informatics research network.](https://onlinelibrary.wiley.com/doi/full/10.1111/epi.13828) Epilepsia. 2017; 58: e101-e6.
 
