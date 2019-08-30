@@ -73,7 +73,7 @@ A package for creating patient level prediction models. Given a
     be assessed to fit a predictive model using a number of machine learning algorithms.
     Several performance measures are implemented for model evaluation.
 
-[Learn more ...](https://github.com/OHDSI/PatientLevelPrediction)
+[Learn more ...](https://ohdsi.github.io/PatientLevelPrediction)
 
 # Method characterization
 
@@ -82,13 +82,13 @@ Packages that characterize the performance of methods, or combine multiple estim
 ## `r icon::fa('cube')` EmpiricalCalibration 
 
 Routines for performing empirical calibration of observational
-    study estimates. By using a set of negative control hypotheses we can
-    estimate the empirical null distribution of a particular observational
-    study setup. This empirical null distribution can be used to compute a
-    calibrated p-value, which reflects the probability of observing an
-    estimated effect size when the null hypothesis is true taking both random
-    and systematic error into account. A similar approach can be used to
-	calibrate confidence intervals, using both negative and positive controls.
+  study estimates. By using a set of negative control hypotheses we can
+  estimate the empirical null distribution of a particular observational
+  study setup. This empirical null distribution can be used to compute a
+  calibrated p-value, which reflects the probability of observing an
+  estimated effect size when the null hypothesis is true taking both random
+  and systematic error into account. A similar approach can be used to
+  calibrate confidence intervals, using both negative and positive controls.
 
 [Learn more ...](https://ohdsi.github.io/EmpiricalCalibration)
 
@@ -108,8 +108,8 @@ This package contains resources for the evaluation of the
 ## `r icon::fa('cube')` EvidenceSynthesis 
 
 Routines for combining evidence and diagnostics across multiple 
-   sources, such as multiple data sites in a distributed study. This includes functions
-   for performing meta-analysis and forest plots.
+  sources, such as multiple data sites in a distributed study. This includes functions
+  for performing meta-analysis and forest plots.
 
 [Learn more ...](https://github.com/OHDSI/EvidenceSynthesis)
 
@@ -131,24 +131,24 @@ This model fitting tool incorporates cyclic coordinate descent and
 ## `r icon::fa('cube')` DatabaseConnector 
 
 An R 'DataBase Interface' ('DBI') compatible interface to various database platforms ('PostgreSQL', 'Oracle', 'Microsoft SQL Server', 
-    'Amazon Redshift', 'Microsoft Parallel Database Warehouse', 'IBM Netezza', 'Apache Impala', and 'Google BigQuery'). Also includes support for
-    fetching data as 'ffdf' objects. Uses 'Java Database Connectivity' ('JDBC') to connect to databases.
+    'Amazon Redshift', 'Microsoft Parallel Database Warehouse', 'IBM Netezza', 'Apache Impala', 'Google BigQuery', and 'SQLite'). Also includes support for
+    fetching data as 'ffdf' objects. Uses 'Java Database Connectivity' ('JDBC') to connect to databases (except SQLite).
 
 [Learn more ...](https://ohdsi.github.io/DatabaseConnector)
 
 ## `r icon::fa('cube')` SqlRender 
 
 A rendering tool for parameterized SQL that also translates into
-    different SQL dialects.  These dialects include 'Microsoft Sql Server', 'Oracle', 
-    'PostgreSql', 'Amazon RedShift', 'Apache Impala', 'IBM Netezza', 'Google BigQuery', and 'Microsoft PDW'.
+  different SQL dialects.  These dialects include 'Microsoft Sql Server', 'Oracle', 
+  'PostgreSql', 'Amazon RedShift', 'Apache Impala', 'IBM Netezza', 'Google BigQuery', 'Microsoft PDW', and 'SQLite'.
 
 [Learn more ...](https://ohdsi.github.io/SqlRender)
 
 ## `r icon::fa('cube')` ParallelLogger 
 
 Support for parallel computation with progress bar, and option to stop or proceed on errors. Also provides logging to console and disk, 
-    and the logging persists in the parallel threads. Additional functions support function call automation with delayed execution (e.g. for executing functions in
-    parallel).
+  and the logging persists in the parallel threads. Additional functions support function call automation with delayed execution (e.g. for executing functions in
+  parallel).
 
 [Learn more ...](https://ohdsi.github.io/ParallelLogger)
 

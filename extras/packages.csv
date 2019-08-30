@@ -4,7 +4,7 @@ order,name,section,inCran,pages
 3,SelfControlledCohort,Population-level estimation,FALSE,TRUE
 4,CaseControl,Population-level estimation,FALSE,TRUE
 5,CaseCrossover,Population-level estimation,FALSE,TRUE
-6,PatientLevelPrediction,Patient-level prediction,FALSE,FALSE
+6,PatientLevelPrediction,Patient-level prediction,FALSE,TRUE
 7,EmpiricalCalibration,Method characterization,TRUE,TRUE
 8,MethodEvaluation,Method characterization,FALSE,TRUE
 9,EvidenceSynthesis,Method characterization,FALSE,FALSE

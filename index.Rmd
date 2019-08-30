@@ -14,14 +14,6 @@ The packages offer R functions that together can be used to perform an observati
 The Methods Library is a set of R packages that execute against data in a database server. The Library supports traditional database systems (PostgreSQL, Microsoft SQL Server, and Oracle), parallel data warehouses (Microsoft APS, IBM Netezza, and Amazon RedShift), as well as 'Big Data' platforms (Hadoop through Impala, and Google BigQuery). 
 
 
-## Common Data Model
-The Methods Library requires access to observational health care data in the [Common Data Model](https://github.com/OHDSI/CommonDataModel/wiki). 
+# Learn How to Use the Methods Library
 
-
-## Cohorts
-One of the essential inputs for the Methods Library are *cohorts*.
-
-> A **cohort** is a set of persons who satisfy one or more inclusion criteria for a duration of time. 
-		
-The Methods Library operates on cohorts, such as exposure cohorts and outcome cohorts, but does not provide functionality for constructing cohorts. One can create cohorts using SQL, or use interactive tools such as [ATLAS](http://www.ohdsi.org/web/atlas).
-
+<a href="http://book.ohdsi.org"><img src="images/book.png" width="250" height="400" alt="Cover image" align="right" style="margin: 0 1em 0 1em" /></a> Learn how to use the Methods Library to produce reliable evidence from real-world data with The Book of OHDSI. Read it <a href="http://book.ohdsi.org">online</a>.
