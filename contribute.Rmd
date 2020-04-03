@@ -6,6 +6,8 @@ output:
         toc_float: TRUE
 ---
 
+The OHDSI Methods Library is built by the community for the community. No matter what you skill level, there is always a way for you to contribute:
+
 # File bug reports
 
 If you've found a bug you can help out by filing a bug report. Each package has an issue tracker where you can create a new issue. Try and be as specific as possible. What error message occurs? Can you provide a simple example to reproduce the problem? What versions of the various packages are you running?

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -76,9 +76,7 @@ h6 {
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -92,7 +90,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -197,8 +194,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -243,6 +238,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -255,48 +251,9 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -310,6 +267,12 @@ $(document).ready(function ()  {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -345,8 +308,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -355,6 +316,16 @@ div.tocify {
 
 
 </style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
@@ -426,10 +397,30 @@ div.tocify {
 </li>
 <li>
   <a href="contribute.html">
-    <span class="fa fa-wrench"></span>
+    <span class="fa fa-hand-paper"></span>
      
     Contribute
   </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-wrench"></span>
+     
+    Developers
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="developerGuidelines.html">Developer Guidelines</a>
+    </li>
+    <li>
+      <a href="codeStyle.html">Code Style</a>
+    </li>
+    <li>
+      <a href="releaseProcess.html">Release Process</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -457,7 +448,7 @@ div.tocify {
 </ol>
 <div id="instructions-for-windows" class="section level1">
 <h1>Instructions for Windows</h1>
-<p>A video version of these instructions can be found at <a href="https://youtu.be/K9_0s2Rchbo" class="uri">https://youtu.be/K9_0s2Rchbo</a>.</p>
+<p>A video version of these instructions can be found at <a href="https://youtu.be/K9_0s2Rchbo">https://youtu.be/K9_0s2Rchbo</a>.</p>
 
 <div class="rmdimportant">
 In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you <strong>must</strong> also install Java in both architectures. It is recommended to only install the 64-bit version of R.
@@ -466,7 +457,7 @@ In Windows, both R and Java come in 32-bit and 64-bits architectures. If you ins
 <div id="installing-r" class="section level2">
 <h2>Installing R</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘base’, then click the Download link indicated in the screenshot below.</p>
+<li><p>Go to <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘base’, then click the Download link indicated in the screenshot below.</p>
 <p><img src="images/downloadR.png" /></p></li>
 <li><p>After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, disable the 32-bit architecture as also shown below. <img src="images/rDestination.png" /></p>
 <p><img src="images/no32Bits.png" /></p></li>
@@ -476,21 +467,21 @@ In Windows, both R and Java come in 32-bit and 64-bits architectures. If you ins
 <div id="installing-rtools" class="section level2">
 <h2>Installing RTools</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘Rtools’, and select the very latest version of RTools to download.</p></li>
+<li><p>Go to <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘Rtools’, and select the very latest version of RTools to download.</p></li>
 <li><p>After downloading has completed run the installer. Select the default options everywhere.</p></li>
 </ol>
 </div>
 <div id="installing-rstudio" class="section level2">
 <h2>Installing RStudio</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a>, select ‘Download RStudio’ (or the ‘Download’ button under ‘RStudio’), opt for the free version, and download the installer for Windows as highlighted below. <img src="images/downloadRStudio.png" /></p></li>
+<li><p>Go to <a href="https://www.rstudio.com/">https://www.rstudio.com/</a>, select ‘Download RStudio’ (or the ‘Download’ button under ‘RStudio’), opt for the free version, and download the installer for Windows as highlighted below. <img src="images/downloadRStudio.png" /></p></li>
 <li><p>After downloading, start the installer, and use the default options everywhere.</p></li>
 </ol>
 </div>
 <div id="installing-java" class="section level2">
 <h2>Installing Java</h2>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://java.com/en/download/manual.jsp" class="uri">https://java.com/en/download/manual.jsp</a>, and select the Windows 64-bit installer as highlighted below. If you also installed the 32-bit version of R, you <em>must</em> also install the other (32-bit) version of Java. <img src="images/downloadJava.png" /></p></li>
+<li><p>Go to <a href="https://java.com/en/download/manual.jsp">https://java.com/en/download/manual.jsp</a>, and select the Windows 64-bit installer as highlighted below. If you also installed the 32-bit version of R, you <em>must</em> also install the other (32-bit) version of Java. <img src="images/downloadJava.png" /></p></li>
 <li><p>After downloading just run the installer.</p></li>
 </ol>
 </div>
@@ -527,6 +518,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

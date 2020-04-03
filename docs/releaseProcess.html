@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title>README.utf8.md</title>
+<title>Release Process</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,9 +19,14 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -71,9 +76,7 @@ h6 {
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -87,7 +90,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -192,8 +194,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -238,6 +238,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -250,20 +251,90 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -326,10 +397,30 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="contribute.html">
-    <span class="fa fa-wrench"></span>
+    <span class="fa fa-hand-paper"></span>
      
     Contribute
   </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-wrench"></span>
+     
+    Developers
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="developerGuidelines.html">Developer Guidelines</a>
+    </li>
+    <li>
+      <a href="codeStyle.html">Code Style</a>
+    </li>
+    <li>
+      <a href="releaseProcess.html">Release Process</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -343,26 +434,56 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Release Process</h1>
 
 </div>
 
 
-<div id="methodslibrary" class="section level1">
-<h1>MethodsLibrary</h1>
-<p>[Under development] A central repository for things related to the OHDSI Methods Library</p>
-<p>This builds the <a href="https://ohdsi.github.io/MethodsLibrary">Methods Library website</a>.</p>
+<div id="the-develop-branch" class="section level1">
+<h1>The develop branch</h1>
+<p>All development should be done in the <code>develop</code> branch of the package GithHub repository. The aim should be to have a workable version in <code>develop</code> branch, so <strong>make sure your package passes R check locally before pushing to the <code>develop</code> branch</strong>.</p>
 </div>
-<div id="requirements" class="section level1">
-<h1>Requirements</h1>
-<p>Make sure you have the icon package installed:</p>
-<pre class="r"><code>devtools::install_github(&quot;ropenscilabs/icon&quot;)</code></pre>
-<pre class="r"><code>shell(&quot;R -e &#39;rmarkdown::build_site()&#39;&quot;)
-
-shell(&quot;R -e rmarkdown::render_site()&quot;)</code></pre>
+<div id="the-master-branch" class="section level1">
+<h1>The master branch</h1>
+<p>The head of the <code>master</code> branch should be the latest released version of the package. No changes should be directly pushed to the <code>master</code> branch.</p>
+</div>
+<div id="continuous-integration" class="section level1">
+<h1>Continuous integration</h1>
+<p>All branches are monitored by <a href="https://travis-ci.org/github/OHDSI">travis</a>. Travis is a continuous integration system, meaning that any change pushed to one of the branches triggers the package to be built, and R check to be performed. Any warnings or errors that occur during this process will cause an e-mail to be sent to the package maintainers.</p>
+</div>
+<div id="creating-a-release" class="section level1">
+<h1>Creating a release</h1>
+<p>Only the package maintainer may create a new release. The release should be prepared in the <code>develop</code> branch. The following steps are mandatory:</p>
+<ol style="list-style-type: decimal">
+<li><p>Update the package version number in the DESCRIPTION file.</p></li>
+<li><p>Update the documentation. This includes the following steps. Note that the <code>extras/PackageMaintenance.R</code> file should contain the code needed to perform most of these steps:</p>
+<ul>
+<li>Run roxygen to regenerate the manual files.</li>
+<li>Updating the <code>NEWS.md</code> file to reflect all the changes and bugfixes included in the new version.</li>
+<li>Perform a spellcheck using <code>devtools::spellcheck()</code></li>
+<li>Regenerate the package manual PDF.</li>
+<li>Regenerate any vignette PDFs.</li>
+<li>Regerate the package website using <code>pkgdown</code>.</li>
+</ul></li>
+<li><p>Make sure the package passes R check, both locally and on travis.</p></li>
+</ol>
+<p>For those packages that go into CRAN, the following additional step must be taken:</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Check the package using <code>devtools::check_win_devel()</code> and <code>devtools::check_rhub()</code>.</li>
+</ol>
+<p>Once all these steps are completed and commited to the <code>develop</code> branch, the package can be released by merging <code>develop</code> into <code>master</code>.</p>
+<p>Pushing changes to the <code>master</code> branch where the version number in the DESCRIPTION file is higher than the current one will trigger the automated release process. If the package passes R check, the following steps are automatically performed:</p>
+<ol style="list-style-type: decimal">
+<li><p>A new tag is created in the GitHub repo with the version number.</p></li>
+<li><p>The package is pushed to the <a href="https://github.com/OHDSI/drat">OHDSI <code>drat</code> repo</a>.</p></li>
+</ol>
+<p>For those packages that go into CRAN, the package can be submitted to CRAN using <code>devtools::release()</code>.</p>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -377,6 +498,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

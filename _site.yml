@@ -29,5 +29,14 @@ navbar:
         - text: "R setup"
           href: rSetup.html  
     - text: "Contribute"
-      icon: fa-wrench
+      icon: fa-hand-paper
       href: contribute.html
+    - text: "Developers"
+      icon: fa-wrench
+      menu: 
+        - text: "Developer Guidelines"
+          href: developerGuidelines.html   
+        - text: "Code Style"
+          href: codeStyle.html 
+        - text: "Release Process"
+          href: releaseProcess.html 

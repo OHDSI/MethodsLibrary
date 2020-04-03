@@ -10,6 +10,16 @@ These papers were written using the OHDSI Methods Library.
 
 # Clinical application
 
+- Hripcsak G, Suchard MA, Shea S, et al. [Comparison of Cardiovascular and Safety Outcomes of Chlorthalidone vs Hydrochlorothiazide to Treat Hypertension.](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2760777) JAMA Intern Med. 2020 Feb 17.
+
+- Reps JM, Cepeda MS, Ryan PB. [Wisdom of the CROUD:  Development and validation of a patient-level prediction model for opioid use disorder using population-level claims data.](http://dx.plos.org/10.1371/journal.pone.0228632) PLoS One. 2020 Feb 13;15(2):e0228632.
+
+- Wang Q, Reps JM, Kostka KF, et al. [Development and validation of a prognostic model predicting symptomatic hemorrhagic transformation in acute ischemic stroke at scale in the OHDSI network.](http://dx.plos.org/10.1371/journal.pone.0226718) PLoS One. 2020 Jan 7;15(1):e0226718. 
+
+- Suchard MA, Schuemie MJ, Krumholz HM, et al. [Comprehensive comparative effectiveness and safety of first-line antihypertensive drug classes: a systematic, multinational, large-scale analysis.](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32317-7/fulltext) Lancet. 2019 Nov 16;394(10211):1816-1826.
+
+- You SC, Jung S, Swerdel JN, Ryan PB, et al. [Comparison of First-Line Dual Combination Treatments in Hypertension: Real-World Evidence from Multinational Heterogeneous Cohorts.](https://e-kcj.org/DOIx.php?id=10.4070/kcj.2019.0173) Korean Circ J. 2020 Jan;50(1):52-68.
+
 - Johnston SS, Morton JM, Kalsekar I, et al. [Using Machine Learning Applied to Real-World Healthcare Data for Predictive Analytics: An Applied Example in Bariatric Surgery.](https://www.sciencedirect.com/science/article/pii/S1098301519300737?via%3Dihub) Value Health. 2019 May;22(5):580-586. 
 
 - Vashisht R, Jung K, Schuler A, et al. [Association of hemoglobin a1c levels with use of sulfonylureas, dipeptidyl peptidase 4 inhibitors, and thiazolidinediones in patients with type 2 diabetes treated with metformin: Analysis from the observational health data sciences and informatics initiative.](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2698083) JAMA Network Open. 2018; 1: e181755.
@@ -33,17 +43,21 @@ These papers were written using the OHDSI Methods Library.
 
 # Methods research
 
+- Schuemie MJ, Cepeda MS, Suchard MA, et al. [How Confident Are We About Observational Findings in Health Care: A Benchmark Study](https://hdsr.mitpress.mit.edu/pub/fxz7kr65) Harvard Data Science Review, 2(1).
+
+- Schuemie MJ, Ryan PB, Man KKC, et al. [A plea to stop using the case-control design in retrospective database studies.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6771795/) Stat Med. 2019 Sep 30;38(22):4199-4208.
+
 - Reps JM, Rijnbeek PR, Ryan PB. [Identifying the DEAD: Development and Validation of a Patient-Level Model to Predict Death Status in Population-Level Claims Data.](https://link.springer.com/article/10.1007%2Fs40264-019-00827-0) Drug Saf. 2019 May 3. 
 
-- Reps JM, Schuemie MJ, Suchard MA, Ryan PB, Rijnbeek PR. [Design and implementation of a standardized framework to generate and evaluate patient-level prediction models using observational healthcare data.](https://academic.oup.com/jamia/article/25/8/969/4989437) J Am Med Inform Assoc. 2018;25(8):969-975.
+- Reps JM, Schuemie MJ, Suchard MA, et al. [Design and implementation of a standardized framework to generate and evaluate patient-level prediction models using observational healthcare data.](https://academic.oup.com/jamia/article/25/8/969/4989437) J Am Med Inform Assoc. 2018;25(8):969-975.
 
-- Schuemie MJ, Ryan PB, Hripcsak G, Madigan D and Suchard MA. [Improving reproducibility by using high-throughput observational studies with empirical calibration.](http://rsta.royalsocietypublishing.org/content/376/2128/20170356.long) Philosophical transactions Series A, Mathematical, physical, and engineering sciences. 2018; 376.
+- Schuemie MJ, Ryan PB, Hripcsak G, et al. [Improving reproducibility by using high-throughput observational studies with empirical calibration.](http://rsta.royalsocietypublishing.org/content/376/2128/20170356.long) Philosophical transactions Series A, Mathematical, physical, and engineering sciences. 2018; 376.
 
 - Tian Y, Schuemie MJ and Suchard MA. [Evaluating large-scale propensity score performance through real-world and synthetic data experiments.](https://academic.oup.com/ije/advance-article-abstract/doi/10.1093/ije/dyy120/5043131) International journal of epidemiology. 2018.
 
-- Schuemie MJ, Hripcsak G, Ryan PB, Madigan D and Suchard MA. [Empirical confidence interval calibration for population-level effect estimation studies in observational healthcare data.](http://www.pnas.org/content/115/11/2571.long) Proceedings of the National Academy of Sciences of the United States of America. 2018; 115: 2571-7.
+- Schuemie MJ, Hripcsak G, Ryan PB, et al. [Empirical confidence interval calibration for population-level effect estimation studies in observational healthcare data.](http://www.pnas.org/content/115/11/2571.long) Proceedings of the National Academy of Sciences of the United States of America. 2018; 115: 2571-7.
 
-- Schuemie MJ, Hripcsak G, Ryan PB, Madigan D and Suchard MA. [Robust empirical calibration of p-values using observational data.](https://onlinelibrary.wiley.com/doi/10.1002/sim.6977) Statistics in medicine. 2016; 35: 3883-8.
+- Schuemie MJ, Hripcsak G, Ryan PB, et al. [Robust empirical calibration of p-values using observational data.](https://onlinelibrary.wiley.com/doi/10.1002/sim.6977) Statistics in medicine. 2016; 35: 3883-8.
 
-- Schuemie MJ, Ryan PB, DuMouchel W, Suchard MA and Madigan D. [Interpreting observational studies: why empirical calibration is needed to correct p-values.](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.5925) Statistics in medicine. 2014; 33: 209-18.
+- Schuemie MJ, Ryan PB, DuMouchel W, et al. [Interpreting observational studies: why empirical calibration is needed to correct p-values.](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.5925) Statistics in medicine. 2014; 33: 209-18.
 
