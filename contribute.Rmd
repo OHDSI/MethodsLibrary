@@ -18,18 +18,5 @@ If you're a bit more experienced with the Methods Library and are looking to imp
 
 # Write unit tests
 
-An important part of validating the methods in the library is unit testing. A unit test is a small program that tests a specific function in the library. For example, there are [several unit tests](https://github.com/OHDSI/CohortMethod/blob/master/tests/testthat/test-psFunctions.R#L5) that make sure the propensity score matching works correctly. We can never have enough unit tests, and writing unit tests is an excellent way to learn how the Methods Library packages work under the hood.
+An important part of validating the methods in the library is unit testing. A unit test is a small program that tests a specific function in the library. For example, there are [several unit tests](https://github.com/OHDSI/CohortMethod/blob/master/tests/testthat/test-psFunctions.R#L5) that make sure the propensity score matching works correctly. We can never have enough unit tests, and writing unit tests is an excellent way to learn how the Methods Library packages work under the hood. Make sure you read through the Develops section first!
 
-# Add methods
-
-We are always looking for new methods and packages to add to the Methods Libary. However, in order to qualify for inclusion a package must meet the following requirements:
-
-- Pass R check without warnings or notes.
-- Adhere to [OHDSI's code style guidelines](https://ohdsi.github.io/MethodsLibrary/contribute.html#code_style_guidelines) and overall development practices.
-- Have [unit tests](http://www.ohdsi.org/web/wiki/doku.php?id=development:unit_testing_in_r) that test the package's most important routines.
-- For population-level estimation methods: be evaluated using the OHDSI Methods Benchmark.
-
-# Code style guidelines
-
-- [Style guide for R code](http://www.ohdsi.org/web/wiki/doku.php?id=development:ohdsi_code_style_for_r)
-- [Style guide for SQL code](http://www.ohdsi.org/web/wiki/doku.php?id=development:ohdsi_code_style_for_sql)

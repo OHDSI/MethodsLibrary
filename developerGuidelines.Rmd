@@ -6,4 +6,81 @@ output:
         toc_float: TRUE
 ---
 
-# To do
+# Pull requests
+
+Before you do a pull request, you should always **file an issue** and make sure the package maintainer agrees that it’s a problem, and is happy with your basic proposal for fixing it. We don’t want you to spend a bunch of time on something that we don’t think is a good idea.
+
+Additional requirements for pull requests:
+
+- Make sure you pass R check before submitting.
+
+- Always target the `develop` branch.
+
+- If possible, add unit tests for new functionality you add.
+
+
+# Package organization
+
+All Methods Library R package follow the basic structure of R packages. See [R packages](http://r-pkgs.had.co.nz/) for a thorough discussion on R packages.
+
+## Documentation
+
+We use R's default package documentation features:
+
+- Functions and data are documented in a package manual. We use [`roxygen2`](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html) to document each function / data where they are defined in the code. 
+
+- Detailed explanations of how to use a package are provides in vignettes. 
+
+The package manual and vignettes are available
+
+- Through R (e.g. by typing `?createPs`)
+
+- As PDFs on the repo GitHub site.
+
+- In the package documentation website.
+
+All of these should be generated when releasing a new version, as discussed in the [Release Process](releaseProcess.html) section.
+
+### README.md
+
+In addition, the README.md file forms the main page of the package repo. This page has a standard structure, as for example can be seen [here](https://github.com/OHDSI/FeatureExtraction/blob/master/README.md).
+
+## extras folder
+
+The `extras` folder contains all files used by the package developer. These files will not be part of the package once installed. A required file in this folder is `PackageMaintenance.R`, which contains the code executed when releasing a package.
+
+
+# Coding guidelines
+
+Some general coding guidelines:
+
+## Function calls must not have invisible side effects
+
+When a user calls a function, the effect of that call should be aparent to the user. This means:
+
+- Do not call `library` or `require` in a function, as this changes the user's search path.
+
+- Do not set options.
+
+- Do not write to files other than those specified by the user in the function call.
+
+- Do not use global variables.
+
+## Avoid unnecessary dependencies
+
+Dependencies lead to instability. Only add dependencies to other packages if completely unavoidable.
+
+We have more or less accepted we need to depend on the [`tidyverse`](https://www.tidyverse.org/), so any of those packages are allowed. 
+
+# Adding packages to the Methods Library
+
+We are always looking to include new, interesting methods to the Methods Libary. For a package to be eligible for admission, it should meet the following criteria:
+
+1. Adhere to all guidelines documented on this site.
+
+2. For those interacting with data: run on all database platforms supported by OHDSI (e.g. PostgreSQL, SQL Server, Oracle, Amazon RedShift)
+
+3. For population-level effect estimation methods: must be evaluated using the OHDSI Methods Benchmark.
+
+
+

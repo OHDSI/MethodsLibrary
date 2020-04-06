@@ -453,12 +453,18 @@ div.tocify {
 </div>
 <div id="naming-conventions" class="section level2">
 <h2>Naming conventions</h2>
-<p>Function names typically start with a verb. Variable names are typically nouns.</p>
-<p>Examples:</p>
+<p>Function names typically start with a verb. Variable names are typically nouns. Do not encode the data type in the variable names. Also, everything is data, so no need to say that unless unavoidable.</p>
+<p><strong>Good</strong></p>
 <ul>
 <li>The <code>fitOutcomeModel</code> function.</li>
 <li>The <code>computeCovariateBalance</code> function.</li>
 <li>The <code>population</code> argument.</li>
+</ul>
+<p><strong>Bad</strong></p>
+<ul>
+<li><code>sampling</code> as variable name (not a noun)</li>
+<li><code>namesVector</code>, <code>covariatesDf</code> (encodes the data type)</li>
+<li><code>getResultData</code> (everything is data)</li>
 </ul>
 </div>
 <div id="spacing" class="section level2">

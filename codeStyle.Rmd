@@ -20,13 +20,19 @@ Examples:
 
 ## Naming conventions
 
-Function names typically start with a verb. Variable names are typically nouns.
+Function names typically start with a verb. Variable names are typically nouns. Do not encode the data type in the variable names. Also, everything is data, so no need to say that unless unavoidable.
 
-Examples:
+**Good**
 
 - The `fitOutcomeModel` function.
 - The `computeCovariateBalance` function.
 - The `population` argument.
+
+**Bad**
+
+- `sampling` as variable name (not a noun)
+- `namesVector`, `covariatesDf` (encodes the data type)
+- `getResultData` (everything is data)
 
 ## Spacing
 
