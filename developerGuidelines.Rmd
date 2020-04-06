@@ -49,6 +49,48 @@ In addition, the README.md file forms the main page of the package repo. This pa
 
 The `extras` folder contains all files used by the package developer. These files will not be part of the package once installed. A required file in this folder is `PackageMaintenance.R`, which contains the code executed when releasing a package.
 
+## Unit tests
+
+OHDSI unit testing for R follows the standard R practice using `test_that`: A folder named 'tests' is created in the root of the package, and this folder contains
+
+- A sub-folder called 'testthat`
+- A file called 'testthat.R'
+- The file 'testthat.R' should have the following content:
+
+```r
+library(testthat)
+library(<package name>)
+test_check("<package name>")
+```
+
+The sub-folder 'testthat` should contain one or more R scripts whose file name starts with 'test-' (e.g. 'test-connection.R'. Each file should contain one or more `test_that` blocks, for example
+
+```r
+test_that("Function x returns 2", {
+  expect_equal(x(), 2)
+})
+111
+
+### When unit tests are performed
+
+Unit tests are triggered when
+
+- You manually perform a check of the R package (see the Build tab in R-Studio)
+
+- When the OHDSI Travis CI Server automatically builds the package after a push to the repository
+
+You should only push changes to the GitHub repository if they pass R check locally.
+
+### Code coverage
+
+We use `codecov` in combination with the `covr` package to measure which lines of codes are covered by at least one unit test. 
+
+### Testing functions requiring database access
+
+On the OHDSI Jenkins server there are 3 databases that can be accessed from within a unit test, for the 3 main platforms (SQL Server, Oracle, PostgreSQL). To access the databases locally, you'll need to specify several environmental variables. These environmental variables should also be available on the OHDSI Travis CI Server.
+
+Some example code in the DatabaseConnector package can be found [here](https://github.com/OHDSI/DatabaseConnector/blob/master/tests/testthat/test-connection.R).
+
 
 # Coding guidelines
 

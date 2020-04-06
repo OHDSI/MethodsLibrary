@@ -475,6 +475,38 @@ div.tocify {
 <h2>extras folder</h2>
 <p>The <code>extras</code> folder contains all files used by the package developer. These files will not be part of the package once installed. A required file in this folder is <code>PackageMaintenance.R</code>, which contains the code executed when releasing a package.</p>
 </div>
+<div id="unit-tests" class="section level2">
+<h2>Unit tests</h2>
+<p>OHDSI unit testing for R follows the standard R practice using <code>test_that</code>: A folder named ‘tests’ is created in the root of the package, and this folder contains</p>
+<ul>
+<li>A sub-folder called ’testthat`</li>
+<li>A file called ‘testthat.R’</li>
+<li>The file ‘testthat.R’ should have the following content:</li>
+</ul>
+<pre class="r"><code>library(testthat)
+library(&lt;package name&gt;)
+test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
+<p>The sub-folder ’testthat<code>should contain one or more R scripts whose file name starts with 'test-' (e.g. 'test-connection.R'. Each file should contain one or more</code>test_that` blocks, for example</p>
+<p>```r test_that(“Function x returns 2”, { expect_equal(x(), 2) }) 111</p>
+<div id="when-unit-tests-are-performed" class="section level3">
+<h3>When unit tests are performed</h3>
+<p>Unit tests are triggered when</p>
+<ul>
+<li><p>You manually perform a check of the R package (see the Build tab in R-Studio)</p></li>
+<li><p>When the OHDSI Travis CI Server automatically builds the package after a push to the repository</p></li>
+</ul>
+<p>You should only push changes to the GitHub repository if they pass R check locally.</p>
+</div>
+<div id="code-coverage" class="section level3">
+<h3>Code coverage</h3>
+<p>We use <code>codecov</code> in combination with the <code>covr</code> package to measure which lines of codes are covered by at least one unit test.</p>
+</div>
+<div id="testing-functions-requiring-database-access" class="section level3">
+<h3>Testing functions requiring database access</h3>
+<p>On the OHDSI Jenkins server there are 3 databases that can be accessed from within a unit test, for the 3 main platforms (SQL Server, Oracle, PostgreSQL). To access the databases locally, you’ll need to specify several environmental variables. These environmental variables should also be available on the OHDSI Travis CI Server.</p>
+<p>Some example code in the DatabaseConnector package can be found <a href="https://github.com/OHDSI/DatabaseConnector/blob/master/tests/testthat/test-connection.R">here</a>.</p>
+</div>
+</div>
 </div>
 <div id="coding-guidelines" class="section level1">
 <h1>Coding guidelines</h1>
