@@ -12,7 +12,7 @@ Before you do a pull request, you should always **file an issue** and make sure 
 
 Additional requirements for pull requests:
 
-- Make sure you pass R check before submitting.
+- Make sure you pass R check without errors and warnings before submitting.
 
 - Always target the `develop` branch.
 
@@ -69,7 +69,7 @@ The sub-folder 'testthat` should contain one or more R scripts whose file name s
 test_that("Function x returns 2", {
   expect_equal(x(), 2)
 })
-111
+```
 
 ### When unit tests are performed
 

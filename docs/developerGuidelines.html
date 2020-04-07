@@ -444,7 +444,7 @@ div.tocify {
 <p>Before you do a pull request, you should always <strong>file an issue</strong> and make sure the package maintainer agrees that it’s a problem, and is happy with your basic proposal for fixing it. We don’t want you to spend a bunch of time on something that we don’t think is a good idea.</p>
 <p>Additional requirements for pull requests:</p>
 <ul>
-<li><p>Make sure you pass R check before submitting.</p></li>
+<li><p>Make sure you pass R check without errors and warnings before submitting.</p></li>
 <li><p>Always target the <code>develop</code> branch.</p></li>
 <li><p>If possible, add unit tests for new functionality you add.</p></li>
 </ul>
@@ -487,7 +487,9 @@ div.tocify {
 library(&lt;package name&gt;)
 test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
 <p>The sub-folder ’testthat<code>should contain one or more R scripts whose file name starts with 'test-' (e.g. 'test-connection.R'. Each file should contain one or more</code>test_that` blocks, for example</p>
-<p>```r test_that(“Function x returns 2”, { expect_equal(x(), 2) }) 111</p>
+<pre class="r"><code>test_that(&quot;Function x returns 2&quot;, {
+  expect_equal(x(), 2)
+})</code></pre>
 <div id="when-unit-tests-are-performed" class="section level3">
 <h3>When unit tests are performed</h3>
 <p>Unit tests are triggered when</p>
