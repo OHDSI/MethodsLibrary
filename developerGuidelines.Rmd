@@ -12,11 +12,15 @@ Before you do a pull request, you should always **file an issue** and make sure 
 
 Additional requirements for pull requests:
 
-- Make sure you pass R check without errors and warnings before submitting.
-
-- Always target the `develop` branch.
+- Adhere to the Developer Guidelines posted here, as well as the [OHDSI Code Style](codeStyle.html).
 
 - If possible, add unit tests for new functionality you add.
+
+- Restrict your pull-request to solving the issue at hand. Do not try to 'improve' parts of the code that are not related to the issue. If you feel other parts of the code need better organization, create a separate issue for that.
+
+- Make sure you pass R check without errors and warnings before submitting.
+
+- Always target the `develop` branch, and make sure you are up-to-date with the develop branch.
 
 
 # Package organization
