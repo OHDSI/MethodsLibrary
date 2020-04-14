@@ -40,3 +40,7 @@ navbar:
           href: codeStyle.html 
         - text: "Release Process"
           href: releaseProcess.html 
+        - text: "Package Statuses"
+          href: packageStatuses.html 
+        - text: "Development Roadmap"
+          href: "developmentRoadmap.html"

@@ -420,6 +420,12 @@ div.tocify {
     <li>
       <a href="releaseProcess.html">Release Process</a>
     </li>
+    <li>
+      <a href="packageStatuses.html">Package Statuses</a>
+    </li>
+    <li>
+      <a href="developmentRoadmap.html">Development Roadmap</a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -446,7 +452,7 @@ div.tocify {
 <ul>
 <li><p>Adhere to the Developer Guidelines posted here, as well as the <a href="codeStyle.html">OHDSI Code Style</a>.</p></li>
 <li><p>If possible, add unit tests for new functionality you add.</p></li>
-<li><p>Restrict your pull-request to solving the issue at hand. Do not try to ‘improve’ parts of the code that are not related to the issue. If you feel other parts of the code need better organization, create a separate issue for that.</p></li>
+<li><p>Restrict your pull request to solving the issue at hand. Do not try to ‘improve’ parts of the code that are not related to the issue. If you feel other parts of the code need better organization, create a separate issue for that.</p></li>
 <li><p>Make sure you pass R check without errors and warnings before submitting.</p></li>
 <li><p>Always target the <code>develop</code> branch, and make sure you are up-to-date with the develop branch.</p></li>
 </ul>
@@ -488,7 +494,7 @@ div.tocify {
 <pre class="r"><code>library(testthat)
 library(&lt;package name&gt;)
 test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
-<p>The sub-folder ’testthat<code>should contain one or more R scripts whose file name starts with 'test-' (e.g. 'test-connection.R'. Each file should contain one or more</code>test_that` blocks, for example</p>
+<p>The sub-folder ‘testthat’ should contain one or more R scripts whose file name starts with ‘test-’ (e.g. ‘test-connection.R’. Each file should contain one or more <code>test_that</code> blocks, for example</p>
 <pre class="r"><code>test_that(&quot;Function x returns 2&quot;, {
   expect_equal(x(), 2)
 })</code></pre>
@@ -530,15 +536,6 @@ test_check(&quot;&lt;package name&gt;&quot;)</code></pre>
 <p>Dependencies lead to instability. Only add dependencies to other packages if completely unavoidable.</p>
 <p>We have more or less accepted we need to depend on the <a href="https://www.tidyverse.org/"><code>tidyverse</code></a>, so any of those packages are allowed.</p>
 </div>
-</div>
-<div id="adding-packages-to-the-methods-library" class="section level1">
-<h1>Adding packages to the Methods Library</h1>
-<p>We are always looking to include new, interesting methods to the Methods Libary. For a package to be eligible for admission, it should meet the following criteria:</p>
-<ol style="list-style-type: decimal">
-<li><p>Adhere to all guidelines documented on this site.</p></li>
-<li><p>For those interacting with data: run on all database platforms supported by OHDSI (e.g. PostgreSQL, SQL Server, Oracle, Amazon RedShift)</p></li>
-<li><p>For population-level effect estimation methods: must be evaluated using the OHDSI Methods Benchmark.</p></li>
-</ol>
 </div>
 
 

@@ -16,7 +16,7 @@ Additional requirements for pull requests:
 
 - If possible, add unit tests for new functionality you add.
 
-- Restrict your pull-request to solving the issue at hand. Do not try to 'improve' parts of the code that are not related to the issue. If you feel other parts of the code need better organization, create a separate issue for that.
+- Restrict your pull request to solving the issue at hand. Do not try to 'improve' parts of the code that are not related to the issue. If you feel other parts of the code need better organization, create a separate issue for that.
 
 - Make sure you pass R check without errors and warnings before submitting.
 
@@ -67,7 +67,7 @@ library(<package name>)
 test_check("<package name>")
 ```
 
-The sub-folder 'testthat` should contain one or more R scripts whose file name starts with 'test-' (e.g. 'test-connection.R'. Each file should contain one or more `test_that` blocks, for example
+The sub-folder 'testthat' should contain one or more R scripts whose file name starts with 'test-' (e.g. 'test-connection.R'. Each file should contain one or more `test_that` blocks, for example
 
 ```r
 test_that("Function x returns 2", {
@@ -117,16 +117,3 @@ When a user calls a function, the effect of that call should be aparent to the u
 Dependencies lead to instability. Only add dependencies to other packages if completely unavoidable.
 
 We have more or less accepted we need to depend on the [`tidyverse`](https://www.tidyverse.org/), so any of those packages are allowed. 
-
-# Adding packages to the Methods Library
-
-We are always looking to include new, interesting methods to the Methods Libary. For a package to be eligible for admission, it should meet the following criteria:
-
-1. Adhere to all guidelines documented on this site.
-
-2. For those interacting with data: run on all database platforms supported by OHDSI (e.g. PostgreSQL, SQL Server, Oracle, Amazon RedShift)
-
-3. For population-level effect estimation methods: must be evaluated using the OHDSI Methods Benchmark.
-
-
-
