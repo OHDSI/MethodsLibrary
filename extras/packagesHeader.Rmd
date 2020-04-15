@@ -6,4 +6,4 @@ output:
         toc_float: TRUE
 ---
 
-Below is the list of packages included in the OHDSI Methods Library. For each package a link is provided to instructions on how to install and use the package.
+Below are the packages included in the OHDSI Methods Library. For each package a link is provided with more information, including instructions on how to install and use the package.

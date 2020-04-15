@@ -1,5 +1,5 @@
 packages <- read.csv("extras/packages.csv", stringsAsFactors = FALSE)
-sections <- read.csv("extras/sections.csv", stringsAsFactors = FALSE)
+# sections <- read.csv("extras/sections.csv", stringsAsFactors = FALSE)
 
 headerFile <- "extras/packagesHeader.Rmd"
 lines <- gsub("\r", "", readChar(headerFile, file.info(headerFile)$size))
@@ -8,23 +8,22 @@ section <- ""
 for (i in 1:nrow(packages)) {
   if (packages$section[i] != section) {
     section <- packages$section[i]
-    lines <- c(lines, paste("#", section))
-    lines <- c(lines, "")
-    lines <- c(lines, sections$description[sections$section == packages$section[i]])
-    lines <- c(lines, "")
+    lines <- c(lines, "</ul>")
+    lines <- c(lines,sprintf("<h2 id=\"pkg_header\">%s</h2>", section))
+    lines <- c(lines, "<ul id=\"pkg\">")
+    # lines <- c(lines, sections$description[sections$section == packages$section[i]])
+    # lines <- c(lines, "")
   }
   name <- packages$name[i]
-  pd <- packageDescription(name)
-  lines <- c(lines, paste("## `r icon::fa('cube')`", name, ""))
-  lines <- c(lines, "")
-  lines <- c(lines, pd$Description)
-  lines <- c(lines, "")
+  # pd <- packageDescription(name)
+  pd <- packages$description[i]
   if (packages$pages[i]) {
-    lines <- c(lines, sprintf("[Learn more ...](https://ohdsi.github.io/%s)", name))
+    url <- sprintf("https://ohdsi.github.io/%s", name)
   } else {
-    lines <- c(lines, sprintf("[Learn more ...](https://github.com/OHDSI/%s)", name))
+    url <- sprintf("https://github.com/OHDSI/%s", name)
   }
-  lines <- c(lines, "")
-  
+  lines <- c(lines, sprintf("<li><h4><i class=\"fas  fa-cube \"></i> <a href=\"%s\">%s</a></h4>%s</br><a href=\"%s\">Learn more...</a></li>",
+                            url, name, pd, url))
 }
+lines <- c(lines, "</ul>")
 write(lines, "packages.Rmd")
