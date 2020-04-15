@@ -21,7 +21,8 @@ These taska are in progress, and should be finished within the next two months:
 These task will be taken on after the short term tasks are complete. We expect to finish them within the next year:
 
 - Add the `ROhdsiWebApi` package to the Methods Library. 
-- Add the `DataQualityDashboard` package to the Methods Library. 
+- Add the `DataQualityDashboard` package to the Methods Library.
+- Add the `OhdsiSharing` package to the Methods Library.  
 - Add support for CDM version 6 to all packages in the Methods Library.
 - Move `FeatureExtraction` into CRAN.
 - Update the `SelfControlledCaseSeries` package to the same standards at the `CohortMehod` package. The `createSccsEras` function curently does too many things at once, like impose the naive period, select the outcome, define the eras, etc. We may want  to have a `createStudyPopulation` function like in `CohortMethod` that performs some of these steps while keeping track of how many subjects are lost at each step. This could then also feed into the several diagnostics functions, and allow us to generate a detailed attrition table. We could then add a Shiny app to view the results.

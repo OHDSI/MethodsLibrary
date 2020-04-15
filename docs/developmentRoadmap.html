@@ -461,6 +461,8 @@ div.tocify {
 <ul>
 <li>Add the <code>ROhdsiWebApi</code> package to the Methods Library.</li>
 <li>Add the <code>DataQualityDashboard</code> package to the Methods Library.</li>
+<li>Add the <code>OhdsiSharing</code> package to the Methods Library.<br />
+</li>
 <li>Add support for CDM version 6 to all packages in the Methods Library.</li>
 <li>Move <code>FeatureExtraction</code> into CRAN.</li>
 <li>Update the <code>SelfControlledCaseSeries</code> package to the same standards at the <code>CohortMehod</code> package. The <code>createSccsEras</code> function curently does too many things at once, like impose the naive period, select the outcome, define the eras, etc. We may want to have a <code>createStudyPopulation</code> function like in <code>CohortMethod</code> that performs some of these steps while keeping track of how many subjects are lost at each step. This could then also feed into the several diagnostics functions, and allow us to generate a detailed attrition table. We could then add a Shiny app to view the results.</li>
