@@ -5,43 +5,7 @@ output:
         toc: TRUE
         toc_float: TRUE
 ---
-| Package                        | Maintainer(s)               | Status          |
-| :----------------------------- | :-------------------------- | :-------------: |
-| CohortMethod                   | Martijn Schuemie            | Methods Library |
-| SelfControlledCaseSeries       | Martijn Schuemie            | Methods Library |
-| SelfControlledCohort           | Martijn Schuemie            | Methods Library |
-| CaseControl                    | Martijn Schuemie            | Methods Library |
-| CaseCrossover                  | Martijn Schuemie            | Methods Library |
-| PatientLevelPrediction         | Jenna Reps & Peter Rijnbeek | Methods Library |
-| EmpiricalCalibration           | Martijn Schuemie            | CRAN            |
-| MethodEvaluation               | Martijn Schuemie            | Methods Library |
-| EvidenceSynthesis              | Martijn Schuemie            | Methods Library |
-| Cyclops                        | Marc Suchard                | CRAN            |
-| DatabaseConnector              | Martijn Schuemie            | CRAN            |
-| SqlRender                      | Martijn Schuemie            | CRAN            |
-| ParallelLogger                 | Martijn Schuemie            | CRAN            |
-| FeatureExtraction              | Martijn Schuemie            | Methods Library |
 
-# Maintainers
+The OHDSI Methods Library has been renamed to [HADES](https://ohdsi.github.io/Hades/). 
 
-The package maintainers have final responsibility and authority over their respective packages. Only a maintainer may create a new release (following the [release process](releaseProcess.html)), accept pull requests, and push to the master branch.
-
-# Package life cycle
-
-We currently distinguish the following stages in a package life cycle:
-
-1. **Candidate**: The R package is being considered for inclusion in the OHDSI Methods Library, but does not yet meet all requirements.
-2. **Methods Library**: The package meets all requirements for inclusion in the Methods Library, and is recommended for use in OHDSI community studies.
-3. **CRAN**: The package is available in CRAN.
-
-## Requirements for packages in the Methods Library
-
-For a package to be eligible for admission to the OHDSI Methods Library, it should meet the following criteria:
-
-1. Adhere to all guidelines documented on this site.
-
-2. For those interacting with data: run on all database platforms supported by OHDSI (e.g. PostgreSQL, SQL Server, Oracle, Amazon RedShift)
-
-3. For population-level effect estimation methods: must be evaluated using the OHDSI Methods Benchmark.
-
-The final decision for including a package in the Methods Library lies with the leaders of the OHDSI [Patient-Level Prediction Workgroup](https://www.ohdsi.org/web/wiki/doku.php?id=projects:workgroups:patient-level_prediction) and [Population-Level Estimation Workgroup](https://www.ohdsi.org/web/wiki/doku.php?id=projects:workgroups:est-methods).
+Please update your bookmarks.

@@ -8,7 +8,7 @@ output:
       in_header: "favicon.html" 
 exclude: ["extras"]
 navbar:
-  title: '<div><img src="ohdsi16x16.png"></img> OHDSI Methods Library</div>'  
+  title: 'OHDSI Methods Library'  
   left:
     - icon: fa-home
       href: index.html

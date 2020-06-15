@@ -347,7 +347,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html"><div><img src="ohdsi16x16.png"></img> OHDSI Methods Library</div></a>
+      <a class="navbar-brand" href="index.html">OHDSI Methods Library</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -445,18 +445,8 @@ div.tocify {
 </div>
 
 
-<div id="validation" class="section level1">
-<h1>Validation</h1>
-<p>Coming soon…</p>
-</div>
-<div id="evaluation" class="section level1">
-<h1>Evaluation</h1>
-<p>The population-level estimation methods have been extensively evaluated using the OHDSI Methods Benchmark. The results are published in:</p>
-<ul>
-<li>Schuemie MJ, Cepeda MS, Suchard MA, et al. <a href="https://hdsr.mitpress.mit.edu/pub/fxz7kr65">How Confident Are We About Observational Findings in Health Care: A Benchmark Study</a> Harvard Data Science Review, 2(1).</li>
-</ul>
-<p>The results of the evaluation can be reviewed in <a href="https://data.ohdsi.org/MethodEvalViewer/">an interactive web application</a>.</p>
-</div>
+<p>The OHDSI Methods Library has been renamed to <a href="https://ohdsi.github.io/Hades/">HADES</a>.</p>
+<p>Please update your bookmarks.</p>
 
 
 
@@ -508,7 +498,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

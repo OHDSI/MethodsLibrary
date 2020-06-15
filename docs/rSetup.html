@@ -347,7 +347,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html"><div><img src="ohdsi16x16.png"></img> OHDSI Methods Library</div></a>
+      <a class="navbar-brand" href="index.html">OHDSI Methods Library</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -445,66 +445,8 @@ div.tocify {
 </div>
 
 
-<p>Here are the steps for installing the required environment to run the OHDSI R packages. Four things needs to be installed:</p>
-<ol style="list-style-type: decimal">
-<li><strong>R</strong> is a statistical computing environment. It comes with a basic user interface that is primarily a command-line interface.</li>
-<li><strong>RTools</strong> is a set of programs that is required on Windows to build R packages from source.</li>
-<li><strong>RStudio</strong> is an IDE (Integrated Development Environment) that makes R easier to use. It includes a code editor, debugging and visualization tools. Please use it to obtain a nice R experience.</li>
-<li><strong>Java</strong> is a computing environment that is needed to run some of the components in the OHDSI R packages, for example those needed to connect to a database.</li>
-</ol>
-<div id="instructions-for-windows" class="section level1">
-<h1>Instructions for Windows</h1>
-<p>A video version of these instructions can be found at <a href="https://youtu.be/K9_0s2Rchbo">https://youtu.be/K9_0s2Rchbo</a>.</p>
-
-<div class="rmdimportant">
-In Windows, both R and Java come in 32-bit and 64-bits architectures. If you install R in both architectures, you <strong>must</strong> also install Java in both architectures. It is recommended to only install the 64-bit version of R.
-</div>
-
-<div id="installing-r" class="section level2">
-<h2>Installing R</h2>
-<ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘base’, then click the Download link indicated in the screenshot below.</p>
-<p><img src="images/downloadR.png" /></p></li>
-<li><p>After the download has completed, run the installer. Use the default options everywhere, with two exceptions: First, it is better not to install into program files. Instead, just make R a subfolder of your C drive as shown below. Second, to avoid problems due to differing architectures between R and Java, disable the 32-bit architecture as also shown below. <img src="images/rDestination.png" /></p>
-<p><img src="images/no32Bits.png" /></p></li>
-</ol>
-<p>Once completed, you should be able to select R from your Start Menu.</p>
-</div>
-<div id="installing-rtools" class="section level2">
-<h2>Installing RTools</h2>
-<ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>, click on ‘Download R for Windows’, then ‘Rtools’, and select the very latest version of RTools to download.</p></li>
-<li><p>After downloading has completed run the installer. Select the default options everywhere.</p></li>
-</ol>
-</div>
-<div id="installing-rstudio" class="section level2">
-<h2>Installing RStudio</h2>
-<ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://www.rstudio.com/">https://www.rstudio.com/</a>, select ‘Download RStudio’ (or the ‘Download’ button under ‘RStudio’), opt for the free version, and download the installer for Windows as highlighted below. <img src="images/downloadRStudio.png" /></p></li>
-<li><p>After downloading, start the installer, and use the default options everywhere.</p></li>
-</ol>
-</div>
-<div id="installing-java" class="section level2">
-<h2>Installing Java</h2>
-<ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://java.com/en/download/manual.jsp">https://java.com/en/download/manual.jsp</a>, and select the Windows 64-bit installer as highlighted below. If you also installed the 32-bit version of R, you <em>must</em> also install the other (32-bit) version of Java. <img src="images/downloadJava.png" /></p></li>
-<li><p>After downloading just run the installer.</p></li>
-</ol>
-</div>
-</div>
-<div id="verifying-the-installation" class="section level1">
-<h1>Verifying the installation</h1>
-<p>You should now be ready to go, but we should make sure. Start R-studio, and type</p>
-<pre class="r"><code>install.packages(&quot;SqlRender&quot;)
-library(SqlRender)
-translate(&quot;SELECT TOP 10 * FROM person;&quot;, &quot;postgresql&quot;)</code></pre>
-<pre><code>## [1] &quot;SELECT  * FROM person LIMIT 10;&quot;</code></pre>
-<p>This function uses Java, so if all goes well we know both R and Java have been installed correctly!</p>
-<p>Another test is to see if source packages can be built. Run the following R code to install the <code>CohortMethod</code> package from the OHDSI GitHub repository:</p>
-<pre class="r"><code>install.packages(&quot;drat&quot;)
-drat::addRepo(&quot;OHDSI&quot;)
-install.packages(&quot;CohortMethod&quot;)</code></pre>
-</div>
+<p>The OHDSI Methods Library has been renamed to <a href="https://ohdsi.github.io/Hades/">HADES</a>.</p>
+<p>Please update your bookmarks.</p>
 
 
 
@@ -556,7 +498,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

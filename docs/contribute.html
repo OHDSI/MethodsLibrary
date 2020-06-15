@@ -347,7 +347,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html"><div><img src="ohdsi16x16.png"></img> OHDSI Methods Library</div></a>
+      <a class="navbar-brand" href="index.html">OHDSI Methods Library</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -445,19 +445,8 @@ div.tocify {
 </div>
 
 
-<p>The OHDSI Methods Library is built by the community for the community. No matter what you skill level, there is always a way for you to contribute:</p>
-<div id="file-bug-reports" class="section level1">
-<h1>File bug reports</h1>
-<p>If you’ve found a bug you can help out by filing a bug report. Each package has an issue tracker where you can create a new issue. Try and be as specific as possible. What error message occurs? Can you provide a simple example to reproduce the problem? What versions of the various packages are you running?</p>
-</div>
-<div id="write-help-files" class="section level1">
-<h1>Write help files</h1>
-<p>If you’re a bit more experienced with the Methods Library and are looking to improve your open source development skills, the next step up is to contribute a pull request to a Methods Library package. The most important thing to know is that Methods Library packages use <a href="https://github.com/klutometis/roxygen">roxygen2</a>: this means that documentation is found in the R code close to the source of each function.</p>
-</div>
-<div id="write-unit-tests" class="section level1">
-<h1>Write unit tests</h1>
-<p>An important part of validating the methods in the library is unit testing. A unit test is a small program that tests a specific function in the library. For example, there are <a href="https://github.com/OHDSI/CohortMethod/blob/master/tests/testthat/test-psFunctions.R#L5">several unit tests</a> that make sure the propensity score matching works correctly. We can never have enough unit tests, and writing unit tests is an excellent way to learn how the Methods Library packages work under the hood. Make sure you read through the Develops section first!</p>
-</div>
+<p>The OHDSI Methods Library has been renamed to <a href="https://ohdsi.github.io/Hades/">HADES</a>.</p>
+<p>Please update your bookmarks.</p>
 
 
 
@@ -509,7 +498,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
